@@ -14,7 +14,8 @@ gulp.task('server', () => {
   browserSync.init({
     server: {
       baseDir: 'app'
-    }
+    },
+    injectChanges: true
   })
 })
 
@@ -47,7 +48,7 @@ gulp.task('useref', function(){
     // uglify js
     .pipe($.if('*.js', uglify()))
     // minify css
-    .piipe($.if('*.css', cssnano()))
+    .pipe($.if('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
@@ -55,10 +56,10 @@ gulp.task('clean:dist', function() {
   return del.sync('dist');
 })
 
-gulp.task('watch', ['server'], () => {
-  gulp.watch('app/sass/**/*.+(sass|scss)', ['sass'], browserSync.reload());
-  gulp.watch('app/*.html', browserSync.reload());
-  gulp.watch('app/js/**/*.js', browserSync.reload());
+gulp.task('watch', ['server', 'sass'], () => {
+  gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('build', callback => {
@@ -69,8 +70,7 @@ gulp.task('build', callback => {
 });
 
 gulp.task('default', callback => {
-  runSequence(['sass', 'server', 'watch'],
-  callback)
+  runSequence(['sass', 'server', 'watch'], callback)
 });
   
 
