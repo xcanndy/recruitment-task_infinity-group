@@ -1,0 +1,85 @@
+@import variables
+@import mixins
+
+.container--header
+  height: 100vh
+  background: url('../images/header_background.jpg') no-repeat center center fixed
+  background-size: cover
+  padding: 0 15%
+  overflow: hidden
+
+.nav
+  position: fixed
+  display: flex
+  height: 95px
+  max-height: 190px
+
+  &__btns
+    display: inline-block
+
+.btn--hamburger
+  display: inline-flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: #62c017
+  +mada-regular(1.2em)
+  color: white
+  text-transform: uppercase
+  letter-spacing: -1px
+  width: $logo-height
+  height: $logo-height
+
+  &[data-toggle="false"]
+    position: absolute
+    padding-bottom: 9px
+    top: -86px
+
+  & > span 
+    width: 35px
+    height: 5px
+    margin-bottom: 3px
+    background-color: white
+    border-radius: 5px
+  
+.logo
+  display: inline-flex
+  width: $logo-height
+  height: $logo-height
+  justify-content: center
+
+  & img 
+    align-self: center
+
+.header-list
+  margin-left: 80px
+  display: flex
+
+  &__item
+    display: flex
+    align-items: center
+
+    &::before
+      content: ''
+      width: 2px
+      height: 55px
+      background-color: white
+
+    & a
+      color: white
+      text-decoration: none
+      +mada-light(1.4em)
+      text-transform: uppercase
+      padding: 20px 50px
+
+
+.header__title
+  margin-top: 45%
+  text-align: center
+  +homenaje(5.8em)
+  text-transform: uppercase
+
+  & > :first-child
+    color: white
+
+
