@@ -37,18 +37,18 @@ gulp.task('sass', () => {
 });
 
 gulp.task('images', function(){
-  return $.src('app/images/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
   .pipe($.cache($.imagemin()))
   .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('useref', function(){
-  return $.src('app/*.html')
+  return gulp.src('app/*.html')
     .pipe($.useref())
     // uglify js
-    .pipe($.if('*.js', uglify()))
+    .pipe($.if('*.js', $.uglify()))
     // minify css
-    .pipe($.if('*.css', cssnano()))
+    .pipe($.if('*.css', $.cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
@@ -64,7 +64,7 @@ gulp.task('watch', ['server', 'sass'], () => {
 
 gulp.task('build', callback => {
   runSequence('clean:dist', 
-    ['sass', 'useref', 'images', 'fonts'], 
+    ['sass', 'useref', 'images'], 
     callback
   )
 });
