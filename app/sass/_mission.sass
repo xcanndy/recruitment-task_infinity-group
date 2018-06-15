@@ -1,0 +1,26 @@
+@import mixins
+
+.container--mission
+  height: 80vh
+  padding: 0 22.4%
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &__title
+    +homenaje(5em)
+    margin-bottom: 4%
+    letter-spacing: -0.25
+
+  &__text-block
+    position: relative
+    +mada-light(2.2em)
+    line-height: 40px
+    letter-spacing: -0.25
+
+    &::before
+      content: '„'
+      +mada-black(61px)
+      position: absolute
+      top: -15%
+      left: -7%
