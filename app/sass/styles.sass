@@ -1,6 +1,7 @@
 @import reset
 @import url('https://fonts.googleapis.com/css?family=Homenaje|Mada:300,400,900')
 @import header
+@import mission
 
 body
   font-size: 62.5%
@@ -11,3 +12,17 @@ button
 
 .container
   display: flex
+
+.jump-to
+  position: absolute
+  right: 0
+  border-bottom: 1px solid #474747
+  color: #242021
+  +homenaje(1.9em)
+  letter-spacing: 0.75 
+
+  &[data-active="true"]
+    padding: 40px 46px
+
+  &[data-active="false"]
+    padding: 40px 10px 40px 
