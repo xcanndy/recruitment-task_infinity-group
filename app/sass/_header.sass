@@ -3,22 +3,25 @@
 
 .container--header
   height: 100vh
-  background: url('../images/header_background.jpg') no-repeat center center fixed
-  background-size: cover
   padding: 0 15%
   overflow: hidden
-
-.nav
+  justify-content: center
+  background: url('../images/header_background.jpg') no-repeat center center fixed
+  background-size: cover
+  
+.nav--main
   position: fixed
   display: flex
-  height: 95px
+  justify-content: space-around
+  width: 70%
+  height: 12%
   max-height: 190px
 
-  &__btns
+  &__buttons
     display: inline-block
 
 .btn--hamburger
-  display: inline-flex
+  display: flex
   flex-direction: column
   justify-content: center
   align-items: center
@@ -51,35 +54,40 @@
   & img 
     align-self: center
 
-.header-list
-  margin-left: 80px
-  display: flex
+.menu
+  display: inline-flex
 
   &__item
     display: flex
     align-items: center
+    color: white
+    text-decoration: none
+    +mada-light(1.4em)
+    text-transform: uppercase
+    padding: 3.38% 50px 3.38% 0
 
     &::before
       content: ''
       width: 2px
       height: 55px
-      background-color: white
+      margin-right: 50px
+      background-color: rgba(255, 255, 255, 0.5)
 
-    & a
-      color: white
-      text-decoration: none
-      +mada-light(1.4em)
-      text-transform: uppercase
-      padding: 20px 50px
-
-
+    &:first-child
+      &::before
+        background: none
+        width: 0
+        height: 0
+      
 .header__title
-  margin-top: 45%
   text-align: center
   +homenaje(5.8em)
   text-transform: uppercase
+  align-self: center
+  color: $text-dark-grey
 
   & > :first-child
+    display: block
     color: white
 
 
