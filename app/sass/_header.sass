@@ -12,13 +12,16 @@
 .nav--main
   position: fixed
   display: flex
-  justify-content: space-around
+  // justify-content: center
   width: 70%
-  height: 12%
-  max-height: 190px
+  height: 14.46vh
 
   &__buttons
     display: inline-block
+    margin-right: auto
+
+  &[data-scroll="true"]
+    background-color: $menu-dark-grey
 
 .btn--hamburger
   display: flex
@@ -30,10 +33,10 @@
   color: white
   text-transform: uppercase
   letter-spacing: -1px
-  width: $logo-height
-  height: $logo-height
+  width: 14.46vh
+  height: 100%
 
-  &[data-toggle="false"]
+  &[data-scroll="false"]
     position: absolute
     padding-bottom: 9px
     top: -86px
@@ -47,15 +50,19 @@
   
 .logo
   display: inline-flex
-  width: $logo-height
-  height: $logo-height
+  width: 14.46vh
+  height: 14.46vh
   justify-content: center
 
   & img 
     align-self: center
 
+  &[data-scroll="true"]
+    background-color: $menu-dark-grey
+
 .menu
   display: inline-flex
+  margin-right: auto
 
   &__item
     display: flex
