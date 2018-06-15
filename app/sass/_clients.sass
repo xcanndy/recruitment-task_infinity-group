@@ -1,0 +1,82 @@
+@import variables
+@import mixins
+
+.container--clients
+  height: 111vh
+  padding: 0 15%
+  background: url('../images/clients_background.jpg') no-repeat center center fixed
+  background-size: cover
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &__title
+    +homenaje(4.9em)
+    color: white
+    letter-spacing: -0.25
+
+.carousel
+  display: flex
+  position: relative
+
+.review
+  display: flex
+  flex-direction: column
+  justify-content: center
+  +mada-light(1em)
+  margin-left: 3%
+
+  &__text
+    font-size: 3em
+    letter-spacing: -0.25
+    line-height: 41.9px
+    margin-bottom: 3%
+    position: relative
+
+    &::before
+      content: '„'
+      +mada-black(61px)
+      position: absolute
+      top: -25%
+      left: -10%
+
+  &__author
+    font-size: 2.2em
+    line-height: 26.9px
+    letter-spacing: -0.25
+    margin-bottom: 5%
+
+    & a
+      color: white
+
+  &__tags
+    display: inline-flex
+    color: white
+
+.tag
+  font-size: 1.488em
+  line-height: 18.2px
+  letter-spacing: -0.25
+  border: 1px solid white
+  padding: 0.6% 1.1%
+  margin-right: 0.5%
+
+.carousel__dots
+  position: absolute
+  display: flex
+  justify-content: space-between
+  width: 60px
+  top: 95%
+  left: 50%
+
+.dot
+  display: inline-block
+  background-color: rgba(255, 255, 255, 0.5)
+  width: 10px
+  height: 10px
+  border-radius: 50%
+
+  &[data-active="true"]
+    background-color: white
+
+    
