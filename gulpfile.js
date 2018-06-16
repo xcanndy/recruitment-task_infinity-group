@@ -54,10 +54,10 @@ gulp.task('js', (cb) => {
 
 gulp.task('useref', (cb) => {
   pump([
-    gulp.src('app/*.html'),
+    gulp.src(['app/*.html', 'app/*.json']),
     $.useref(),
     $.if('app/js/es5/*.js', $.uglify()),
-    $.if('*.css', $.cssnano()),
+    $.if('app/*.css', $.cssnano()),
     gulp.dest('dist')
   ], cb)
 });
@@ -66,12 +66,10 @@ gulp.task('clean:dist', () => {
   return del.sync('dist');
 })
 
-gulp.task('watch', ['server', 'sass'], (cb) => {
-  pump([
-    gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']),
-    gulp.watch('app/*.html', browserSync.reload),
-    gulp.watch('app/js/**/*.js', browserSync.reload)
-  ], cb)
+gulp.task('watch', ['server', 'sass'], () => {
+    gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('build:prod', callback => {
