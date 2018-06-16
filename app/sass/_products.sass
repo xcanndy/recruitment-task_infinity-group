@@ -1,0 +1,70 @@
+.container--products
+  flex-direction: column
+  align-items: center
+  padding: 6% 22.4%
+
+  &__title
+    +homenaje(5em)
+    letter-spacing: -0.25
+    margin-bottom: 3%
+    color: $text-dark-grey
+
+  &__text
+    +mada-light(2.2em)
+    letter-spacing: -0.25
+    line-height: 30px
+    margin-bottom: 6%
+    color: #494949
+  
+.products
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  justify-content: space-between
+
+  &__item
+    display: flex
+    flex-direction: column
+    margin: 5% 0
+    max-width: 25%
+    width: 100%
+    position: relative
+
+    &:hover
+      background-color: #62c017
+      padding: 5% 0 0 0
+      margin: 0
+
+      & img
+        position: relative
+        filter: invert(1)
+        z-index: 0
+        transition: filter 0.3s
+
+      & p 
+        position: absolute
+        opacity: 1
+        visibility: visible
+        background-color: #62c017
+        color: white
+        +mada-regular(1.4em)
+        line-height: 18px
+        letter-spacing: -0.25
+        top: 100%
+        left: 0
+        z-index: -4
+        padding: 0 11% 10%
+        box-sizing: border-box
+
+  & p 
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+
+  & img
+    z-index: -5
+    
