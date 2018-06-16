@@ -7,7 +7,8 @@ const gulp = require('gulp'),
   del = require('del'),
   runSequence = require('run-sequence'),
   log = require('fancy-log'),
-  colors = require('ansi-colors');
+  colors = require('ansi-colors')
+  pump = require('pump');
 
 
 gulp.task('server', () => {
@@ -36,35 +37,47 @@ gulp.task('sass', () => {
     }))
 });
 
-gulp.task('images', function(){
+gulp.task('images', () => {
   return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
   .pipe($.cache($.imagemin()))
   .pipe(gulp.dest('dist/images'))
 });
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe($.useref())
-    // uglify js
-    .pipe($.if('*.js', $.uglify()))
-    // minify css
-    .pipe($.if('*.css', $.cssnano()))
-    .pipe(gulp.dest('dist'))
+gulp.task('js', (cb) => {
+  pump([gulp.src('app/js/*.js'),
+    $.babel({
+        presets: ['env']
+      }),
+    gulp.dest('app/js/es5')
+  ], cb)  
+})
+
+gulp.task('useref', (cb) => {
+  pump([
+    gulp.src('app/*.html'),
+    $.useref(),
+    $.if('app/js/es5/*.js', $.uglify()),
+    $.if('*.css', $.cssnano()),
+    gulp.dest('dist')
+  ], cb)
 });
 
-gulp.task('clean:dist', function() {
+gulp.task('clean:dist', () => {
   return del.sync('dist');
 })
 
-gulp.task('watch', ['server', 'sass'], () => {
-  gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+gulp.task('watch', ['server', 'sass'], (cb) => {
+  pump([
+    gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']),
+    gulp.watch('app/*.html', browserSync.reload),
+    gulp.watch('app/js/**/*.js', browserSync.reload)
+  ], cb)
 });
 
-gulp.task('build', callback => {
+gulp.task('build:prod', callback => {
   runSequence('clean:dist', 
-    ['sass', 'useref', 'images'], 
+    ['sass', 'js'],
+    ['useref', 'images'], 
     callback
   )
 });
