@@ -56,7 +56,7 @@ gulp.task('useref', (cb) => {
   pump([
     gulp.src(['app/*.html', 'app/*.json']),
     $.useref(),
-    $.if('app/js/es5/*.js', $.uglify()),
+    $.if('app/js/es5/*.js', $.babel({ presets: ['env'] }), $.uglify()),
     $.if('app/*.css', $.cssnano()),
     gulp.dest('dist')
   ], cb)

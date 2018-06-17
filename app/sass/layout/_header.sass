@@ -1,5 +1,7 @@
-@import variables
-@import mixins
+@import '../base/colors'
+@import '../base/typography'
+@import '../utils/variables'
+
 
 .container--header
   height: 100vh
@@ -20,16 +22,16 @@
     margin-right: auto
 
   &[data-scroll="true"]
-    background-color: $menu-dark-grey
+    background-color: darken($mine-shaft, 4%)
 
 .btn--hamburger
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  background-color: #62c017
+  background-color: $lima
   +mada-regular(1.2em)
-  color: white
+  color: $white
   text-transform: uppercase
   letter-spacing: -0.25
   width: 100%
@@ -39,26 +41,26 @@
     position: absolute
     padding-bottom: 9px
     top: -95%
-    width: $logo-size
+    width: $nav-size
 
   & > span 
     width: 35px
     height: 5px
     margin-bottom: 3px
-    background-color: white
+    background-color: $white
     border-radius: 5px
   
 .logo
   display: inline-flex
-  width: $logo-size
-  height: $logo-size
+  width: $nav-size
+  height: $nav-size
   justify-content: center
 
   & img 
     align-self: center
 
   &[data-scroll="true"]
-    background-color: $menu-dark-grey
+    background-color: darken($mine-shaft, 4%)
 
 .menu
   display: inline-flex
@@ -67,7 +69,7 @@
   &__item
     display: flex
     align-items: center
-    color: white
+    color: $white
     text-decoration: none
     +mada-light(1.4em)
     text-transform: uppercase
@@ -79,7 +81,7 @@
       width: 2px
       height: 55px
       margin-right: 50px
-      background-color: rgba(255, 255, 255, 0.5)
+      background-color: rgba($white, 0.5)
 
     &:first-child
       &::before
@@ -92,11 +94,11 @@
   +homenaje(5.8em)
   text-transform: uppercase
   align-self: center
-  color: $text-dark-grey
+  color: $mine-shaft
   letter-spacing: -0.25
 
   & > :first-child
     display: block
-    color: white
+    color: $white
 
 

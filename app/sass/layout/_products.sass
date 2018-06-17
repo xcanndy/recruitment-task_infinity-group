@@ -1,3 +1,5 @@
+@import '../base/colors'
+  
 .container--products
   flex-direction: column
   align-items: center
@@ -7,14 +9,14 @@
     +homenaje(5em)
     letter-spacing: -0.25
     margin-bottom: 3%
-    color: $text-dark-grey
+    color: $mine-shaft
 
   &__text
     +mada-light(2.2em)
     letter-spacing: -0.25
     line-height: 30px
     margin-bottom: 6%
-    color: #494949
+    color: $tundora
   
 .products
   display: flex
@@ -32,7 +34,7 @@
     cursor: pointer
 
     &:hover
-      background-color: #62c017
+      background-color: $lima
       padding: 5% 0 0 0
       margin: 0
 
@@ -46,8 +48,8 @@
         position: absolute
         opacity: 1
         visibility: visible
-        background-color: #62c017
-        color: white
+        background-color: $lima
+        color: $white
         +mada-regular(1.4em)
         line-height: 18px
         letter-spacing: -0.25

@@ -1,5 +1,5 @@
-@import variables
-@import mixins
+@import '../base/typography'
+@import '../base/colors'
 
 .container--clients
   padding: 10% 15%
@@ -11,7 +11,7 @@
 
   &__title
     +homenaje(4.9em)
-    color: white
+    color: $white
     letter-spacing: -0.25
 
 .carousel
@@ -46,18 +46,18 @@
     margin-bottom: 5%
 
     & a
-      color: white
+      color: $white
       cursor: pointer
 
   &__tags
     display: inline-flex
-    color: white
+    color: $white
 
 .tag
   font-size: 1.488em
   line-height: 18.2px
   letter-spacing: -0.25
-  border: 1px solid white
+  border: 1px solid $white
   width: auto
   padding: 0.6% 1.1%
   margin-right: 0.5%
@@ -72,12 +72,12 @@
 
 .dot
   display: inline-block
-  background-color: rgba(255, 255, 255, 0.5)
+  background-color: rgba($white, 0.5)
   width: 15px
   height: 15px
   border-radius: 50%
 
   &[data-active="true"]
-    background-color: white
+    background-color: $white
 
     
