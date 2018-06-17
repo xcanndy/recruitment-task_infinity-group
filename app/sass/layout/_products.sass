@@ -6,16 +6,16 @@
   padding: 6% 22.4%
 
   &__title
-    +homenaje(5em)
-    letter-spacing: -0.25
     margin-bottom: 3%
+
+    +homenaje(5em)
     color: $mine-shaft
 
   &__text
-    +mada-light(2.2em)
-    letter-spacing: -0.25
-    line-height: 30px
     margin-bottom: 6%
+
+    +mada-light(2.2em)
+    line-height: 30px
     color: $tundora
   
 .products
@@ -31,42 +31,48 @@
     max-width: 25%
     width: 100%
     position: relative
+
     cursor: pointer
 
     &:hover
-      background-color: $lima
       padding: 5% 0 0 0
       margin: 0
 
+      background-color: $lima
+
       & img
         position: relative
+
         filter: invert(1)
-        z-index: 0
         transition: filter 0.3s
+        z-index: 0
 
       & p 
         position: absolute
-        opacity: 1
-        visibility: visible
-        background-color: $lima
-        color: $white
-        +mada-regular(1.4em)
-        line-height: 18px
-        letter-spacing: -0.25
         top: 100%
         left: 0
-        z-index: -4
         padding: 0 11% 10%
         box-sizing: border-box
+
+        +mada-regular(1.4em)
+        color: $white
+        line-height: 18px
+
+        background-color: $lima
+                
+        opacity: 1
+        visibility: visible
+        z-index: -4
 
   & p 
     position: absolute
     top: 0
     left: 0
-    z-index: -1
-    visibility: hidden
+    
     opacity: 0
     transition: opacity 0.2s
+    visibility: hidden
+    z-index: -1
 
   & img
     z-index: -5

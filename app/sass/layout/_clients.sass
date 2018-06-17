@@ -3,16 +3,16 @@
 
 .container--clients
   padding: 10% 15%
-  background: url('../images/clients_background.jpg') no-repeat center center fixed
-  background-size: cover
   flex-direction: column
   justify-content: center
   align-items: center
 
+  background: url('../images/clients_background.jpg') no-repeat center center fixed
+  background-size: cover
+
   &__title
     +homenaje(4.9em)
     color: $white
-    letter-spacing: -0.25
 
 .carousel
   display: flex
@@ -22,28 +22,30 @@
   display: flex
   flex-direction: column
   justify-content: center
-  +mada-light(1em)
   margin-left: 3%
 
+  +mada-light(1em)
+
   &__text
-    font-size: 3em
-    letter-spacing: -0.25
-    line-height: 41.9px
     margin-bottom: 3%
     position: relative
 
+    font-size: 3em
+    line-height: 41.9px
+
     &::before
-      content: '„'
-      +mada-black(61px)
       position: absolute
       top: -25%
-      left: -10%
+      left: -10% 
+
+      +mada-black(61px)
+      content: '„'
 
   &__author
+    margin-bottom: 5%
+
     font-size: 2.2em
     line-height: 26.9px
-    letter-spacing: -0.25
-    margin-bottom: 5%
 
     & a
       color: $white
@@ -54,13 +56,14 @@
     color: $white
 
 .tag
-  font-size: 1.488em
-  line-height: 18.2px
-  letter-spacing: -0.25
-  border: 1px solid $white
   width: auto
   padding: 0.6% 1.1%
   margin-right: 0.5%
+
+  font-size: 1.488em
+  line-height: 18.2px
+
+  border: 1px solid $white
 
 .carousel__dots
   position: absolute
@@ -72,9 +75,10 @@
 
 .dot
   display: inline-block
-  background-color: rgba($white, 0.5)
   width: 15px
   height: 15px
+
+  background-color: rgba($white, 0.5)
   border-radius: 50%
 
   &[data-active="true"]
