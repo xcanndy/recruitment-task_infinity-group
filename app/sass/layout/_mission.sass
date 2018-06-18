@@ -1,4 +1,4 @@
-@import mixins
+@import '../base/typography'
 
 .container--mission
   height: 80vh
@@ -8,19 +8,20 @@
   align-items: center
 
   &__title
-    +homenaje(5em)
     margin-bottom: 4%
-    letter-spacing: -0.25
+
+    +homenaje(5em)
 
   &__text-block
     position: relative
+
     +mada-light(2.2em)
     line-height: 40px
-    letter-spacing: -0.25
 
     &::before
-      content: '„'
-      +mada-black(61px)
       position: absolute
       top: -15%
       left: -7%
+
+      +mada-black(61px)
+      content: '„'

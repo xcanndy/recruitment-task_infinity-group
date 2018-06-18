@@ -1,0 +1,43 @@
+@import '../base/colors'
+@import '../base/typography'
+@import '../utils/variables'
+
+.jump-to
+  position: absolute
+  right: 0
+  border-bottom: 1px solid darken($tundora, 2.8%)
+  color: $thunder
+  +homenaje(1.9em)
+  letter-spacing: 0.75 
+
+  &[data-active="true"]
+    padding: 40px 46px
+
+  &[data-active="false"]
+    padding: 40px 10px 40px 
+
+.btn--hamburger
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: $lima
+  +mada-regular(1.2em)
+  color: $white
+  text-transform: uppercase
+  letter-spacing: -0.25
+  width: 100%
+  height: 100%
+
+  &[data-scroll="false"]
+    position: absolute
+    padding-bottom: 9px
+    top: -95%
+    width: $nav-size
+
+  & > span 
+    width: 35px
+    height: 5px
+    margin-bottom: 3px
+    background-color: $white
+    border-radius: 5px
