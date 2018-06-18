@@ -92,7 +92,7 @@ gulp.task('clean:dist', () => {
   return del.sync('dist');
 })
 
-gulp.task('watch', ['server', 'sass'], () => {
+gulp.task('watch', ['server', 'styles:sass'], () => {
     gulp.watch('app/sass/**/*.+(sass|scss)', ['styles:sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -106,7 +106,7 @@ gulp.task('build:prod', callback => {
 });
 
 gulp.task('default', callback => {
-  runSequence(['styles', 'server', 'watch'], callback)
+  runSequence(['styles:sass', 'server', 'watch'], callback)
 });
   
 
