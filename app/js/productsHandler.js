@@ -23,7 +23,7 @@ fetch('../products.json')
         const products = data.products;
         products.map(product => {
           const id = product.id,
-                name = product.name
+                name = product.name,
                 imgUrl = product.img,
                 description = product.description;
           const prod = createProductHtml(product);

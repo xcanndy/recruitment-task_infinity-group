@@ -20,6 +20,14 @@ gulp.task('server', () => {
   })
 })
 
+gulp.task('server:prod', () => {
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
+    }
+  })
+})
+
 gulp.task('styles:sass', () => {
   log( colors.yellow('Compiling SASS to CSS') );
 
