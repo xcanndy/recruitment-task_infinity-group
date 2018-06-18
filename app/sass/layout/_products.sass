@@ -1,0 +1,83 @@
+@import '../base/colors'
+  
+.container--products
+  flex-direction: column
+  align-items: center
+  padding: 6% 22.4%
+
+  &__title
+    margin-bottom: 3%
+
+    +homenaje(5em)
+    color: $mine-shaft
+
+  &__text
+    margin-bottom: 6%
+
+    +mada-light(2.2em)
+    line-height: 30px
+    color: $tundora
+  
+.products
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  justify-content: space-between
+
+  &__item
+    display: flex
+    flex-direction: column
+    margin: 5% 0
+    max-width: 25%
+    width: 100%
+    position: relative
+
+    cursor: pointer
+
+    &:hover
+      padding: 5% 0 0 0
+      margin: 0
+
+      background-color: $lima
+
+      & img
+        position: relative
+
+        filter: invert(1)
+        transition: filter 0.3s
+        z-index: 0
+
+      & p 
+        position: absolute
+        top: 100%
+        left: 0
+        padding: 0 11% 10%
+        box-sizing: border-box
+
+        +mada-regular(1.4em)
+        color: $white
+        line-height: 18px
+
+        background-color: $lima
+                
+        opacity: 1
+        visibility: visible
+        z-index: -4
+
+  & p 
+    position: absolute
+    top: 0
+    left: 0
+
+    +mada-regular(1.4em)
+    color: $white
+    line-height: 1.8em
+    
+    opacity: 0
+    transition: opacity 0.2s
+    visibility: hidden
+    z-index: -1
+
+  & img
+    z-index: -5
+    
