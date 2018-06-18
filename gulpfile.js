@@ -20,7 +20,7 @@ gulp.task('server', () => {
   })
 })
 
-gulp.task('sass', () => {
+gulp.task('styles:sass', () => {
   log( colors.yellow('Compiling SASS to CSS') );
 
   return gulp.src('app/sass/**/*.+(sass|scss)')
@@ -37,29 +37,47 @@ gulp.task('sass', () => {
     }))
 });
 
-gulp.task('images', () => {
-  return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
-  .pipe($.cache($.imagemin()))
-  .pipe(gulp.dest('dist/images'))
+gulp.task('images',callback => {
+  pump([
+    gulp.src('app/images/**/*.+(png|jpg|gif|svg)'),
+    $.cache($.imagemin()),
+    gulp.dest('dist/images')
+  ], callback)
 });
 
-gulp.task('js', (cb) => {
-  pump([gulp.src('app/js/*.js'),
+gulp.task('js:minify', callback => {
+  pump([
+    gulp.src('app/js/*.js'),
     $.babel({
-        presets: ['env']
-      }),
-    gulp.dest('app/js/es5')
-  ], cb)  
+      presets: ['env']
+    }),
+    $.uglify(),
+    $.rename('main.min.js'),
+    gulp.dest('dist/js')
+  ], callback)
 })
 
-gulp.task('useref', (cb) => {
+gulp.task('useref', callback => {
+  const jsFilter = $.filter('app/js/*.js', {restore: true});
+  const cssFilter = $.filter('app/css/*.css', {restore: true});
+
   pump([
     gulp.src(['app/*.html', 'app/*.json']),
     $.useref(),
-    $.if('app/js/es5/*.js', $.babel({ presets: ['env'] }), $.uglify()),
-    $.if('app/*.css', $.cssnano()),
+    // js: es6 => es5 + minify
+    jsFilter,
+    $.babel({
+      presets: ['env']
+    }),
+    $.uglify(),
+    jsFilter.restore,
+    // css: minify
+    cssFilter,
+    $.cssnano(),
+    cssFilter.restore,
     gulp.dest('dist')
-  ], cb)
+  ], callback)
+
 });
 
 gulp.task('clean:dist', () => {
@@ -67,21 +85,20 @@ gulp.task('clean:dist', () => {
 })
 
 gulp.task('watch', ['server', 'sass'], () => {
-    gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
+    gulp.watch('app/sass/**/*.+(sass|scss)', ['styles:sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('build:prod', callback => {
-  runSequence('clean:dist', 
-    ['sass', 'js'],
+  runSequence('clean:dist', 'styles:sass',
     ['useref', 'images'], 
     callback
   )
 });
 
 gulp.task('default', callback => {
-  runSequence(['sass', 'server', 'watch'], callback)
+  runSequence(['styles', 'server', 'watch'], callback)
 });
   
 
