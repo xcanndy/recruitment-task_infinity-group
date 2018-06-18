@@ -71,10 +71,26 @@
       <!-- products list -->
     </div>
   </section>
+  <section class="container container--map">
+    <address class="address">
+      <div class="address__title">
+        <img src="./images/map-icon.svg" alt="Compass icon" class="address__img">Infinity Group Sp. z o.o.
+      </div>
+        ul.Skladowa 12, <br/>
+        15-399 Bialystok, <br/>
+        Polska. <br/>
+        <p class="address__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </address>
+    <div class="map" id="map"></div>
+  </section>
 
   <!--build:js ./js/main.min.js -->
   <script src="./js/productsHandler.js"></script>
+  <script src="./js/initMap.js"></script>
   <!-- endbuild -->
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV7I4Cvl9DsFKDrr4fqbDR3mbnuIzcE-M&callback=initMap"
+  type="text/javascript"></script>
 </body>
 
 </html>
