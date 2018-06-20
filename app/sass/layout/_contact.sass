@@ -1,10 +1,13 @@
 @import './base/colors'
 @import './base/typography'
+@import './components/checkboxes'
 
 .container--contact
   flex-wrap: wrap
   justify-content: space-between
   padding: 10% 15%
+
+  background-color: $alabaster
 
   &__title
     +homenaje(5rem)
@@ -15,7 +18,7 @@
   flex-direction: column
   align-items: center
   width: 100%
-  padding: 0 8%
+  padding: 0 10%
 
   &__description
     margin-top: 5%
@@ -40,6 +43,10 @@
       padding: 0.5% 1%
       margin-bottom: 0.5%
 
+      +mada-light(2rem)
+
+      background-color: $alabaster
+
       border: none
       border-bottom: 2px solid $dusty-grey
 
@@ -48,11 +55,49 @@
 
     & label
       display: block
+      position: relative
       margin: 1.5% 0 5% 0
+      padding-left: 4%
 
       +mada-light(1.8rem)
       line-height: 4.19rem
       color: darken($mine-shaft, 0.1)
-    
+
+      cursor: pointer
+
+      &:hover input ~ .checkbox--contact
+        background-color: $mercury      
+
+      & input[type="checkbox"]
+        position: absolute
+        left: -100%
+        opacity: 0
+
+        &:checked ~ .checkbox--contact
+          background-color: $lima
+          border: 1px solid $scorpion
+
+        &:checked ~ .checkbox--contact::after
+          display: block
+          position: absolute
+          top: 10%
+          left: 30%
+
+      & .checkbox--contact
+        width: 2rem
+        height: 2rem
+        box-sizing: border-box
+
+        background-color: $white
+
+        border: 1px solid $alto
+
+        &::after
+          position: absolute
+          display: none
+
+          content: ""
+
     & .btn--contact
       align-self: center
+
