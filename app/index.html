@@ -19,7 +19,7 @@
   <header class="container container--header">
     <nav class="nav nav--main" data-scroll="false">
       <div class="nav--main__buttons">
-        <button class="btn--hamburger" data-scroll="false">
+        <button class="btn btn--hamburger" data-scroll="false">
           <span></span>
           <span></span>
           <span></span>
@@ -41,11 +41,11 @@
     </h1>
   </header>
   <section class="container container--mission">
-    <h1 class="container--mission__title">Mission</h1>
+    <h2 class="container--mission__title">Mission</h2>
     <p class="container--mission__text-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
   </section>
   <section class="container container--clients">
-    <h1 class="container--clients__title">Clients</h1>
+    <h2 class="container--clients__title">Clients</h2>
     <div class="carousel">
       <img class="carousel__img" src="../images/ipad_mockup_1.png" alt="">
       <div class="review">
@@ -65,7 +65,7 @@
     </div>
   </section>
   <section class="container container--products">
-    <h1 class="container--products__title">Products</h1>
+    <h2 class="container--products__title">Products</h2>
     <p class="container--products__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
     <div class="products">
       <!-- products list -->
@@ -82,6 +82,28 @@
         <p class="address__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     </address>
     <div class="map" id="map"></div>
+  </section>
+  <section class="container container--contact">
+    <h2 class="container--contact__title">Contact</h2>
+    <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up">
+    </button>
+    <div class="contact">
+      <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+      <form action="" class="contact__form">
+        <span>
+          Hello! I'm <input type="text" name="contact__name" placeholder="Your name"> and I represent <input type="text" name="contact__company-name" placeholder="Company name">.
+        </span>
+        <span>
+          Call me at <input type="text" name="contact__phone" placeholder="Your telephone number"> or send an email to <input type="text" name="contact__email" placeholder="Your email address">.
+        </span>
+        <label for="contact__checkbox">
+          <input type="checkbox" name="contact__checkbox" id="contact__checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        </label>
+        <button class="btn btn--contact">
+          send details <img src="./images/arrow-icon.svg" class="arrow">
+        </button>
+      </form>
+    </div>    
   </section>
 
   <!--build:js ./js/main.min.js -->
