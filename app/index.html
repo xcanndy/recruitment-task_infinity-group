@@ -89,19 +89,19 @@
     </button>
     <div class="contact">
       <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
-      <form action="" class="contact__form">
+      <form action="" class="contact__form" id="form--contact">
         <span>
-          Hello! I'm <input type="text" name="contact__name" placeholder="Your name"> and I represent <input type="text" name="contact__company-name" placeholder="Company name">.
+          Hello! I'm <input type="text" name="form__name" placeholder="Your name" required> and I represent <input type="text" name="form__company-name" placeholder="Company name" required>.
         </span>
         <span>
-          Call me at <input type="text" name="contact__phone" placeholder="Your telephone number"> or send an email to <input type="text" name="contact__email" placeholder="Your email address">.
+          Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required> or send an email to <input type="email" name="form__email" placeholder="Your email address" required>.
         </span>
         <label for="contact__checkbox">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          <input type="checkbox" name="contact__checkbox" id="contact__checkbox">
+          <input type="checkbox" name="form__checkbox" id="contact__checkbox" required>
           <span class="checkbox checkbox--contact"></span>
         </label>
-        <button class="btn btn--contact">
+        <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">
           send details <img src="./images/arrow-icon.svg" class="arrow">
         </button>
       </form>
@@ -113,6 +113,7 @@
   </footer>
 
   <!--build:js ./js/main.min.js -->
+  <script src="./js/formValidator.js"></script>
   <script src="./js/productsHandler.js"></script>
   <script src="./js/initMap.js"></script>
   <!-- endbuild -->

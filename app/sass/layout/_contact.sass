@@ -28,9 +28,11 @@
 
   &__form
     display: flex
+    flex-wrap: wr
     flex-direction: column
     width: 100%
     margin-top: 5%
+    position: relative
 
     +mada-light(3rem)
     line-height: 4.19rem
@@ -38,7 +40,7 @@
     & span
       display: block
 
-    & input[type="text"]
+    & input
       margin: 0 1%
       padding: 0.5% 1%
       margin-bottom: 0.5%
@@ -52,6 +54,9 @@
 
       &::placeholder
         font-size: 1.4rem
+
+      &.invalid
+        outline: 2px solid red
 
     & label
       display: block
