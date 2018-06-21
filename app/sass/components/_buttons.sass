@@ -2,7 +2,6 @@
 @import '../base/typography'
 @import '../utils/variables'
 
-
 .btn
 
   &--jump-to
@@ -21,16 +20,25 @@
 
   &--hamburger
     display: flex
+    position: relative
     flex-direction: column
     justify-content: center
     align-items: center
-    background-color: $lima
+    width: $nav-size
+    height: $nav-size
+    top: 0
+    
     +mada-regular(1.2em)
     color: $white
     text-transform: uppercase
     letter-spacing: -0.25
-    width: 100%
-    height: 100%
+
+    background-color: $lima
+
+    transition: top 0.5s
+
+    &:hover 
+      background-color: darken($lima, 3)
 
     &[data-scroll="false"]
       position: absolute
@@ -38,12 +46,12 @@
       top: -95%
       width: $nav-size
 
-      > span 
-        width: 35px
-        height: 5px
-        margin-bottom: 3px
-        background-color: $white
-        border-radius: 5px
+    > span 
+      width: 35px
+      height: 5px
+      margin-bottom: 3px
+      background-color: $white
+      border-radius: 5px
 
   &--contact
     width: auto

@@ -19,32 +19,32 @@
   <header class="container container--header">
     <nav class="nav nav--main" data-scroll="false">
       <div class="nav--main__buttons">
-        <button class="btn btn--hamburger" data-scroll="false">
+        <button class="btn btn--hamburger" id="btnHamburger" data-scroll="false">
           <span></span>
           <span></span>
           <span></span>
           Menu
         </button>
-        <a href="#" class="logo" data-scroll="false">
+        <a href="#" class="logo" id="logo" data-scroll="false" data-visible="true">
           <img src="./images/logo.svg" alt="Logo">
         </a>
       </div>
-      <ul class="menu">
-        <a href="#" class="menu__item">Mission</a>
-        <a href="#" class="menu__item">Clients</a>
-        <a href="#" class="menu__item">Products</a>
-        <a href="#" class="menu__item">Contact</a>
+      <ul class="menu" id="menu" data-visible="true">
+        <a href="#missionSection" class="menu__item">Mission</a>
+        <a href="#clientsSection" class="menu__item">Clients</a>
+        <a href="#productsSection" class="menu__item">Products</a>
+        <a href="#contactSection" class="menu__item">Contact</a>
       </ul>
     </nav>
     <h1 class="header__title">
       <span>Praktyki</span> Infinity-Group
     </h1>
   </header>
-  <section class="container container--mission">
+  <section class="container container--mission" id="missionSection">
     <h2 class="container--mission__title">Mission</h2>
     <p class="container--mission__text-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
   </section>
-  <section class="container container--clients">
+  <section class="container container--clients" id="clientsSection">
     <h2 class="container--clients__title">Clients</h2>
     <div class="carousel">
       <img class="carousel__img" src="../images/ipad_mockup_1.png" alt="">
@@ -64,14 +64,14 @@
       </div>
     </div>
   </section>
-  <section class="container container--products">
+  <section class="container container--products" id="productsSection">
     <h2 class="container--products__title">Products</h2>
     <p class="container--products__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
     <div class="products">
       <!-- products list -->
     </div>
   </section>
-  <section class="container container--map">
+  <section class="container container--map" id="mapSection">
     <address class="address">
       <div class="address__title">
         <img src="./images/map-icon.svg" alt="Compass icon" class="address__img">Infinity Group Sp. z o.o.
@@ -83,7 +83,7 @@
     </address>
     <div class="map" id="map"></div>
   </section>
-  <section class="container container--contact">
+  <section class="container container--contact" id="contactSection">
     <h2 class="container--contact__title">Contact</h2>
     <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up">
     </button>
@@ -113,11 +113,17 @@
   </footer>
 
   <!--build:js ./js/main.min.js -->
+  <script src="./js/navHandler.js"></script>
   <script src="./js/formValidator.js"></script>
   <script src="./js/productsHandler.js"></script>
   <script src="./js/initMap.js"></script>
   <!-- endbuild -->
-  
+  <!-- smooth scroll  -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {speed: 800});
+</script>
+<!-- map -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV7I4Cvl9DsFKDrr4fqbDR3mbnuIzcE-M&callback=initMap"
   type="text/javascript"></script>
 </body>

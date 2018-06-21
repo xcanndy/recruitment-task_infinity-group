@@ -17,14 +17,17 @@
   position: fixed
   display: flex
   width: 70%
-  height: 14%
+  height: $nav-size
+
+  z-index: 10
 
   &__buttons
     display: inline-block
     margin-right: auto
 
   &[data-scroll="true"]
-    background-color: darken($mine-shaft, 4%)
+    background-color: lighten($mine-shaft, 2.5)
+    z-index: 10
   
 .logo
   display: inline-flex
@@ -36,7 +39,10 @@
     align-self: center
 
   &[data-scroll="true"]
-    background-color: darken($mine-shaft, 4%)
+    background-color: lighten($mine-shaft, 2.5)
+
+  &[data-visible="false"]
+    display: none
 
 .menu
   display: inline-flex
@@ -44,7 +50,7 @@
 
   &__item
     display: flex
-    padding: 3.38% 50px 3.38% 0
+    padding: 3.38% 3rem 3.38% 0
     align-items: center
 
     color: $white
@@ -53,11 +59,13 @@
     text-transform: uppercase
     letter-spacing: 0.25
     
+    &:hover
+      background-color: lighten($mine-shaft, 4.5)
 
     &::before
       width: 2px
       height: 55px
-      margin-right: 50px
+      margin-right: 3rem
 
       background-color: rgba($white, 0.5)
       content: ''
@@ -68,6 +76,9 @@
         height: 0
 
         background: none
+
+  &[data-visible="false"]
+    display: none
       
 .header__title
   text-align: center
@@ -76,8 +87,9 @@
   align-self: center
   color: $mine-shaft
 
-  & > :first-child
+  > :first-child
     display: block
+    
     color: $white
 
 
