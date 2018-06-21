@@ -47,21 +47,23 @@
   <section class="container container--clients" id="clientsSection">
     <h2 class="container--clients__title">Clients</h2>
     <div class="carousel">
-      <img class="carousel__img" src="../images/ipad_mockup_1.png" alt="">
-      <div class="review">
-        <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="review__author">Project Manager / <a href="www.infinity-group.pl">Infinity-group.pl</a></p>
-        <div class="review__tags">
-          <span class="tag">web design</span>
-          <span class="tag">usability</span>
-          <span class="tag">e-commerce</span>
+      <div class="slide">
+        <img class="slide__img" src="../images/ipad_mockup_1.png" alt="">
+        <div class="review">
+          <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="review__author">Project Manager / <a href="www.infinity-group.pl">Infinity-group.pl</a></p>
+          <div class="review__tags">
+            <span class="tag">web design</span>
+            <span class="tag">usability</span>
+            <span class="tag">e-commerce</span>
+          </div>
         </div>
       </div>
-      <div class="carousel__dots">
-        <span class="dot" data-active="true"></span>
-        <span class="dot" data-active="false"></span>
-        <span class="dot" data-active="false"></span>
-      </div>
+      <div class="dots">
+          <span class="dot" data-active="true"></span>
+          <span class="dot" data-active="false"></span>
+          <span class="dot" data-active="false"></span>
+        </div>
     </div>
   </section>
   <section class="container container--products" id="productsSection">
@@ -115,6 +117,7 @@
   <!--build:js ./js/main.min.js -->
   <script src="./js/navHandler.js"></script>
   <script src="./js/formValidator.js"></script>
+  <script src="./js/carousel.js"></script>
   <script src="./js/productsHandler.js"></script>
   <script src="./js/initMap.js"></script>
   <!-- endbuild -->
