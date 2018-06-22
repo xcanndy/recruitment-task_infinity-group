@@ -37,10 +37,10 @@
     +mada-light(3rem)
     line-height: 4.19rem
 
-    & span
+    span
       display: block
 
-    & input
+    input
       margin: 0 1%
       padding: 0.5% 1%
       margin-bottom: 0.5%
@@ -55,7 +55,11 @@
       &::placeholder
         font-size: 1.4rem
 
-      &.invalid
+      &:focus
+        & ~ .checkbox--contact
+            outline: 5px auto -webkit-focus-ring-color
+
+      .invalid
         outline: 2px solid red
 
     & label
@@ -73,7 +77,7 @@
       &:hover input ~ .checkbox--contact
         background-color: $mercury      
 
-      & input[type="checkbox"]
+      input[type="checkbox"]
         position: absolute
         left: -100%
         opacity: 0
@@ -88,7 +92,7 @@
           top: 10%
           left: 30%
 
-      & .checkbox--contact
+      .checkbox--contact
         width: 2rem
         height: 2rem
         box-sizing: border-box
@@ -103,6 +107,6 @@
 
           content: ""
 
-    & .btn--contact
+    .btn--contact
       align-self: center
 

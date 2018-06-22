@@ -19,7 +19,7 @@
   <header class="container container--header">
     <nav class="nav nav--main" data-scroll="false">
       <div class="nav--main__buttons">
-        <button class="btn btn--hamburger" id="btnHamburger" data-scroll="false">
+        <button class="btn btn--hamburger" id="btnHamburger" data-scroll="false" disabled>
           <span></span>
           <span></span>
           <span></span>
@@ -39,6 +39,11 @@
     <h1 class="header__title">
       <span>Praktyki</span> Infinity-Group
     </h1>
+    <!-- cookies -->
+    <button class="btn btn--jump-to">
+        <img src="./images/arrow-jump-to.svg" alt="Jump up">
+        <img src="./images/arrow-jump-to.svg" alt="Jump down">
+    </button>
   </header>
   <section class="container container--mission" id="missionSection">
     <h2 class="container--mission__title">Mission</h2>
@@ -98,10 +103,12 @@
 
   <!--build:js ./js/main.min.js -->
   <script src="./js/navHandler.js"></script>
+  <script src="./js/cookies.js"></script>
   <script src="./js/formValidator.js"></script>
   <script src="./js/carousel.js"></script>
   <script src="./js/productsHandler.js"></script>
   <script src="./js/initMap.js"></script>
+  <script src="./js/jumpToHandler.js"></script>
   <!-- endbuild -->
 </script>
   <!-- smooth scroll  -->

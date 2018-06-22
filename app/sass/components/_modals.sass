@@ -1,4 +1,5 @@
 @import './base/colors'
+@import './base/typography'
 
 .modals 
   display: inline-block
@@ -17,3 +18,48 @@
 
     border: 2px solid red
     border-radius: 4px
+
+  &--cookies
+    position: absolute
+    display: flex
+    bottom: 0
+    left: 0
+    padding: 2% 15%
+    align-items: center
+    justify-content: space-between
+
+    background-color: rgba(darken($mine-shaft, 4.5), 0.83)
+
+    &__text
+      +mada-regular(1.4rem)
+      line-height: 1.89rem
+      letter-spacing: 0.25
+      color: $white
+      width: 80%
+
+      a
+        color: $lima
+
+  &--sections-counter
+    position: absolute
+    top: 35%
+    right: 0
+    +homenaje(1.9em)
+    letter-spacing: 0.75 
+
+    &[data-active="true"]
+      padding: 40px 46px
+
+      transition: padding-right 1s
+
+    &[data-active="false"]
+      padding: 40px 10px 40px 
+
+      transition: padding-right 1s
+
+    &[data-color="dark"]
+      border-bottom: 1px solid darken($tundora, 2.8%)
+      color: $thunder
+    &[data-color="light"]
+      border-bottom: 1px solid $white
+      color: $white

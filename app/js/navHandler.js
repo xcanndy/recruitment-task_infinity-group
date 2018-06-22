@@ -17,10 +17,12 @@ const menuScrollHandler = () => {
   
   if(scrollPercentage >= 0.0001) {
     dataToggleHandler([btnHamburger], 'data-scroll', 'true');
+    btnHamburger.disabled = false;
     dataToggleHandler([nav, logo], 'data-scroll', 'false');
     dataToggleHandler([menu, logo], 'data-visible', 'false');
   } else {
     dataToggleHandler([btnHamburger], 'data-scroll', 'false');
+    btnHamburger.disabled = true;
     dataToggleHandler([menu, logo], 'data-visible', 'true');
   }  
 }
