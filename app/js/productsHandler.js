@@ -16,18 +16,13 @@ const createProductHtml = product => {
   return productContainer;
 }
 
-fetch('../products.json')
+fetch('./data/products.json')
   .then(response => {
     return response.json()
       .then(data => {
         const products = data.products;
         products.map(product => {
-          const id = product.id,
-                name = product.name,
-                imgUrl = product.img,
-                description = product.description;
-          const prod = createProductHtml(product);
-          productsSection.append(prod);
+          productsSection.append(createProductHtml(product));
         });
       });
   });
