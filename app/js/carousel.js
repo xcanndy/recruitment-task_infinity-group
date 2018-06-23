@@ -23,6 +23,7 @@ const createCarousel = slides => {
     const slideImage = document.createElement('img');
     slideImage.classList.add('slide__img');
     slideImage.src = slide.img;
+
     slideContainer.append(slideImage);
 
     // slide review
@@ -32,14 +33,18 @@ const createCarousel = slides => {
     const reviewText = document.createElement('p');
     reviewText.classList.add('review__text');
     reviewText.innerText = slide.review.text;
+
     reviewContainer.append(reviewText);
 
     const reviewAuthorElement = document.createElement('p');
     reviewAuthorElement.classList.add('review__author');
     reviewAuthorElement.innerText = `${slide.review.author} / `;
+    
     const reviewLinkElement = document.createElement('a');
     reviewLinkElement.href = slide.review.link;
+    reviewLinkElement.target = '_blank';
     reviewLinkElement.innerText = slide.review.linkName;
+
     reviewAuthorElement.append(reviewLinkElement);
     reviewContainer.append(reviewAuthorElement);
 
@@ -50,6 +55,7 @@ const createCarousel = slides => {
       const tagElement = document.createElement('span');
       tagElement.classList.add('tag');
       tagElement.innerText = tags[index];
+
       reviewTagsElement.append(tagElement);
     });
     reviewContainer.append(reviewTagsElement);
