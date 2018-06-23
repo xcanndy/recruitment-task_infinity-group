@@ -16,7 +16,7 @@ const createProductHtml = product => {
   return productContainer;
 }
 
-fetch('./products.json')
+fetch('.images/products.json')
   .then(response => {
     return response.json()
       .then(data => {
