@@ -13,6 +13,9 @@
   background-size: cover
 
   overflow: hidden
+
+  +tablet
+    padding: 0 10%
   
 .nav--main
   position: fixed
@@ -22,9 +25,39 @@
 
   z-index: 10
 
+  +mobile-small
+    height: auto
+    width: 100vw
+
+  +mobile-medium
+    height: auto
+    width: 100vw
+
+  +mobile-large
+    height: auto
+    width: 100vw
+
+  +tablet
+    width: 80vw
+
   &__buttons
     display: inline-block
     margin-right: auto
+
+    +mobile-small
+      margin-left: 5%
+      margin-right: 0
+      z-index: 10
+
+    +mobile-medium
+      margin-left: 5%
+      margin-right: 0
+      z-index: 10
+
+    +mobile-large
+      margin-left: 5%
+      margin-right: 0
+      z-index: 10
 
   &[data-scroll="true"]
     background-color: lighten($mine-shaft, 2.5)
@@ -35,12 +68,44 @@
   width: $nav-size
   height: $nav-size
   justify-content: center
+  align-items: center
+
+  +mobile-small
+    display: none
+    width: $nav-size - 50px
+    height: $nav-size - 50px
+
+  +mobile-medium
+    display: none
+    width: $nav-size - 40px
+    height: $nav-size - 40px
+
+  +mobile-large
+    display: none
+    width: $nav-size - 40px
+    height: $nav-size - 40px
 
   & img 
     align-self: center
+    max-width: 100%
 
   &[data-scroll="true"]
     background-color: lighten($mine-shaft, 2.5)
+
+    +mobile-small
+      display: flex
+      margin: 0 auto
+      min-width: 100%
+
+    +mobile-medium
+      min-width: 80%
+      margin: 0 auto
+      display: flex
+
+    +mobile-large
+      min-width: 80%
+      margin: 0 auto
+      display: flex
 
   &[data-visible="false"]
     display: none
@@ -49,28 +114,81 @@
   display: inline-flex
   margin-right: auto
 
+  +mobile-small
+    position: absolute
+    padding-bottom: 10%
+    width: 100%
+    flex-direction: column
+    align-items: center
+
+    background-color: lighten($mine-shaft, 2.5)
+
+  +mobile-medium
+    position: absolute
+    padding-bottom: 10%
+    width: 100%
+    flex-direction: column
+    align-items: center
+
+    background-color: lighten($mine-shaft, 2.5)
+
+  +mobile-large
+    position: absolute
+    padding-bottom: 10%
+    width: 100%
+    flex-direction: column
+    align-items: center
+
+    background-color: lighten($mine-shaft, 2.5)
+
   &__item
     display: flex
     padding: 3.38% 3rem 3.38% 0
     align-items: center
+    justify-content: center
 
-    color: $white
-    text-decoration: none
-    +mada-light(1.4rem)
-    line-height: 2.898rem
-    text-transform: uppercase
-    letter-spacing: 0.25
+    +mobile-small
+      padding: 1rem 1.5rem
+      margin: 5% 0 0 0 
+      border-bottom: 1px solid rgba($white, 0.5)
+
+    +mobile-medium
+      padding: 1rem 1.5rem
+      margin: 5% 0 0 0 
+      border-bottom: 1px solid rgba($white, 0.5)
+
+    +mobile-large
+      padding: 1rem 1.5rem
+      margin: 5% 0 0 0 
+      border-bottom: 1px solid rgba($white, 0.5)
+    
+    a 
+      color: $white
+      text-decoration: none
+      +mada-light(1.4rem)
+      line-height: 2.898rem
+      text-transform: uppercase
+      letter-spacing: 0.25
     
     &:hover
       background-color: lighten($mine-shaft, 4.5)
 
     &::before
       width: 2px
-      height: 55px
+      height: 6rem
       margin-right: 3rem
 
       background-color: rgba($white, 0.5)
       content: ''
+
+      +mobile-small
+        display: none
+
+      +mobile-medium
+        display: none
+
+      +mobile-large
+        display: none
 
     &:first-child
       &::before
@@ -89,6 +207,18 @@
   text-transform: uppercase
   align-self: center
   color: $mine-shaft
+
+  +mobile-small
+    font-size: 5rem
+
+  +mobile-medium
+    font-size: 5rem
+
+  +mobile-large
+    font-size: 5rem
+
+  +tablet
+    font-size: 5rem
 
   > :first-child
     display: block

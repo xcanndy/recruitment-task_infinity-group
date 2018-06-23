@@ -9,9 +9,45 @@
 
   background-color: $alabaster
 
+  +mobile-small
+    flex-direction: column
+    padding: 10% 10%
+
+  +mobile-medium
+    flex-direction: column
+    padding: 10% 10%
+
+  +mobile-large
+    flex-direction: column
+    padding: 10% 10%
+
   &__title
     +homenaje(5rem)
     color: $mine-shaft
+
+    +mobile-small
+      margin-bottom: 5%
+
+      font-size: 4rem
+      text-align: center
+
+    +mobile-medium
+      margin-bottom: 5%
+
+      font-size: 4rem
+      text-align: center
+
+    +mobile-large
+      margin-bottom: 5%
+
+      font-size: 4.5rem
+      text-align: center
+
+    +tablet
+      margin-bottom: 0
+
+      font-size: 4.5rem
+      text-align: center
 
 .contact
   display: flex
@@ -20,11 +56,42 @@
   width: 100%
   padding: 0 10%
 
+  +mobile-small
+    padding: 0
+
+  +mobile-medium
+    padding: 0
+
+  +mobile-large
+    padding: 0
+
+  +tablet
+    padding: 0
+
   &__description
     margin-top: 5%
 
     +mada-light(2.2rem)
     color: darken($mine-shaft, 0.1)
+
+    +mobile-small
+      margin-top: 5%
+      text-align: center
+
+    +mobile-medium
+      margin-top: 5%
+      text-align: center
+
+    +mobile-large
+      margin-top: 5%
+      text-align: center
+
+    +tablet
+      margin-top: 5%
+      text-align: center
+
+    +desktop-small
+      font-size: 2rem
 
   &__form
     display: flex
@@ -36,8 +103,35 @@
     +mada-light(3rem)
     line-height: 4.19rem
 
+    +mobile-small
+      font-size: 2.5rem
+
+    +mobile-medium
+      font-size: 2.5rem
+
+    +mobile-large
+      font-size: 2.5rem
+
+    +tablet
+      font-size: 2.5rem
+
+    +desktop-small
+      font-size: 2.7rem
+
     span
       display: block
+
+      +mobile-small
+        display: flex
+        flex-direction: column
+
+      +mobile-medium
+        display: flex
+        flex-direction: column
+
+      +mobile-large
+        display: flex
+        flex-direction: column
 
     input
       margin: 0 1%
@@ -51,6 +145,15 @@
       border: none
       border-bottom: 2px solid $dusty-grey
 
+      +mobile-small
+        display: inline-flex
+
+      +mobile-medium
+        display: inline-flex
+
+      +mobile-large
+        display: inline-flex
+
       &::placeholder
         font-size: 1.4rem
 
@@ -59,10 +162,12 @@
             outline: 5px auto -webkit-focus-ring-color
 
       &.invalid
-          outline: 2px solid red
+          outline: 1px solid $red
 
     & label
-      display: block
+      display: flex
+      align-items: center
+      justify-content: center
       position: relative
       margin: 1.5% 0 5% 0
       padding-left: 3rem
@@ -108,4 +213,3 @@
 
     .btn--contact
       align-self: center
-

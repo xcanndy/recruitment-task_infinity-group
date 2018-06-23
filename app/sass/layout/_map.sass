@@ -11,11 +11,22 @@
 
   border-left: 3vw solid $gallery
 
+  +mobile-small
+    flex-direction: column
+
+  +mobile-medium
+    flex-direction: column
+
+  +mobile-large
+    flex-direction: column
+
+  +tablet
+    flex-direction: column
+
 .address
   display: flex
   flex-direction: column
   justify-content: center
-  width: 50%
   height: $map-height
   padding: 0 2% 0 15%
   box-sizing: border-box
@@ -23,6 +34,29 @@
   +mada-light(2.2rem)
   color: $mine-shaft
   line-height: 2.4rem
+
+  +mobile-small
+    font-size: 2rem
+    align-items: center
+    padding-left: 0
+    order: 2
+
+  +mobile-medium
+    font-size: 2rem
+    align-items: center
+    padding-left: 0
+    order: 2
+
+  +mobile-large
+    font-size: 2rem
+    align-items: center
+    padding-left: 0
+    order: 2
+
+  +tablet
+    font-size: 2rem
+    padding: 10% 0 5% 0
+    order: 2
 
   &__title
     display: flex
@@ -32,12 +66,50 @@
     +mada-regular(2.2rem)
     line-height: 2.89rem
 
+    +mobile-small
+      font-size: 2rem
+
+    +mobile-medium
+      font-size: 2rem
+
+    +mobile-large
+      font-size: 2rem
+
+    +tablet
+      width: 100%
+      font-size: 2rem
+
   &__img
     margin-right: 3%
 
   &__description
     margin-top: 5%
 
+    +mobile-small
+      text-align: center
+
+    +mobile-medium
+      text-align: center
+
+    +mobile-large
+      text-align: center
+
+    +tablet
+      text-align: left
+
 .map
   height: $map-height
   width: 100%
+
+  +mobile-small
+    order: 1
+
+  +mobile-medium
+    order: 1
+
+  +mobile-large
+    order: 1
+
+  +tablet
+    height: $map-height + 400
+    order: 1

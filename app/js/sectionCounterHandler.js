@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll('section');
 
-const createSectionCounter = (array) => {
+const createSectionCounter = array => {
   const sections = [...array];
   sections.map((section, index) => {
     section.setAttribute('data-index', index+1);

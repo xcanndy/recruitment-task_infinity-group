@@ -1,5 +1,6 @@
 @import './base/colors'
 @import './base/typography'
+@import './utils/mixins'
 
 .modals 
   display: inline-block
@@ -16,7 +17,7 @@
 
     background-color: $white
 
-    border: 2px solid red
+    border: 2px solid $red
     border-radius: 4px
 
   &--cookies
@@ -48,6 +49,15 @@
     right: 0
     +homenaje(1.9em)
     letter-spacing: 0.75 
+
+    +mobile-small
+      display: none
+
+    +mobile-medium
+      display: none
+
+    +mobile-large
+      display: none
 
     &[data-active="true"]
       padding: 40px 46px

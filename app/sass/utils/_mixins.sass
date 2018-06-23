@@ -1,0 +1,30 @@
+$mobile-small-width: 320px
+$mobile-medium-width: 375px
+$mobile-large-width: 425px
+$tablet-width: 768px
+$desktop-small-width: 1024px
+$desktop-large-width: 1440px
+
+=mobile-small
+  @media (max-width: #{$mobile-medium-width - 1px}) 
+    @content
+
+=mobile-medium
+  @media (min-width: #{$mobile-medium-width}) and (max-width: #{$mobile-large-width - 1px}) 
+    @content
+
+=mobile-large
+  @media (min-width: #{$mobile-large-width}) and (max-width: #{$tablet-width - 1px}) 
+    @content
+
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-small-width - 1px}) 
+    @content;
+
+=desktop-small
+  @media (min-width: #{$desktop-small-width}) and (max-width: #{$desktop-large-width - 1px}) 
+    @content; 
+
+=desktop-large
+  @media (min-width: #{$desktop-large-width}) 
+    @content;

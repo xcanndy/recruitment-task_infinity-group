@@ -30,10 +30,10 @@
         </a>
       </div>
       <ul class="menu" id="menu" data-visible="true">
-        <a href="#missionSection" class="menu__item">Mission</a>
-        <a href="#clientsSection" class="menu__item">Clients</a>
-        <a href="#productsSection" class="menu__item">Products</a>
-        <a href="#contactSection" class="menu__item">Contact</a>
+        <li class="menu__item"><a href="#missionSection">Mission</a></li>
+        <li class="menu__item"><a href="#clientsSection">Clients</a></li>
+        <li class="menu__item"><a href="#productsSection">Products</a></li>
+        <li class="menu__item"><a href="#contactSection">Contact</a></li>
       </ul>
     </nav>
     <h1 class="header__title">
@@ -77,7 +77,7 @@
     <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up">
     </button>
     <div class="contact">
-      <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+      <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, <strong>totam rem aperiam</strong>, eaque ipsa quae ab illo <strong>inventore veritatis et</strong> quasi architecto beatae vitae.</p>
       <form action="" class="contact__form" id="form--contact">
         <span>
           Hello! I'm <input type="text" name="form__name" placeholder="Your name" required> and I represent <input type="text" name="form__company-name" placeholder="Company name" required>.
@@ -85,9 +85,7 @@
         <span>
           Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required> or send an email to <input type="email" name="form__email" placeholder="Your email address" required>.
         </span>
-        <label for="contact__checkbox">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          <input type="checkbox" name="form__checkbox" id="contact__checkbox" required>
+        <label for="contact__checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required>
           <span class="checkbox checkbox--contact"></span>
         </label>
         <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">

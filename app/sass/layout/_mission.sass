@@ -1,27 +1,84 @@
 @import '../base/typography'
 
 .container--mission
-  height: 80vh
+  min-height: 80vh
   padding: 0 22.4%
   flex-direction: column
   justify-content: center
   align-items: center
+  position: relative
+
+  +mobile-small
+    padding: 10% 15%
+
+  +mobile-medium
+    padding: 10% 15%
+
+  +mobile-large
+    padding: 10% 15%
+
+  +tablet
+    padding: 5% 15%
 
   &__title
-    margin-bottom: 4%
+    margin-bottom: 3.5rem
 
     +homenaje(5rem)
 
+    +mobile-small 
+      font-size: 4rem
+
+    +mobile-medium
+      font-size: 4rem
+
+    +mobile-large
+      font-size: 4rem
+
+    +tablet
+      font-size: 4rem
+    
   &__text-block
     position: relative
 
     +mada-light(2.2rem)
     line-height: 4rem
 
+    +mobile-small 
+      font-size: 2rem
+
+    +mobile-medium
+      font-size: 2rem
+
+    +mobile-large
+      font-size: 2rem
+
+    +tablet
+      font-size: 2rem
+
     &::before
       position: absolute
       top: -15%
       left: -7%
 
-      +mada-black(61px)
+      +mada-black(6.1rem)
       content: '„'
+
+      +mobile-small
+        top: -5%
+        left: -15%
+        font-size: 5rem
+
+      +mobile-medium
+        top: -5%
+        left: -15%
+        font-size: 5rem
+
+      +mobile-large
+        top: -5%
+        left: -15%
+        font-size: 5rem
+
+      +tablet
+        top: -5%
+        left: -15%
+        font-size: 5rem

@@ -32,7 +32,7 @@ const showJumpToButton = () => {
         clientHeight = body.clientHeight,
         maxScroll = body.scrollHeight - body.clientHeight,
         scrollPercentage = position / maxScroll;
-  if(0.3 * clientHeight < position) {
+  if(0.3 * clientHeight < position && body.clientWidth >= 768) {
     buttonJumpTo.style.display = 'flex';
   }
     
