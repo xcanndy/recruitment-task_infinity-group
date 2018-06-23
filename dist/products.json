@@ -3,73 +3,73 @@
     {
       "id": 1,
       "name": "Malware",
-      "img": "./images/products/product_1.svg",
+      "img": "../images/products/product_1.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 2,
       "name": "Smartphone",
-      "img": "./images/products/product_2.svg",
+      "img": "../images/products/product_2.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 3,
       "name": "Folder",
-      "img": "./images/products/product_3.svg",
+      "img": "../images/products/product_3.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 4,
       "name": "Malware",
-      "img": "./images/products/product_4.svg",
+      "img": "../images/products/product_4.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 5,
       "name": "Pendrive",
-      "img": "./images/products/product_5.svg",
+      "img": "../images/products/product_5.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 6,
       "name": "Network",
-      "img": "./images/products/product_6.svg",
+      "img": "../images/products/product_6.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 7,
       "name": "Smartphone",
-      "img": "./images/products/product_7.svg",
+      "img": "../images/products/product_7.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 8,
       "name": "Fishing",
-      "img": "./images/products/product_8.svg",
+      "img": "../images/products/product_8.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 9,
       "name": "Data protection",
-      "img": "./images/products/product_9.svg",
+      "img": "../images/products/product_9.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 10,
       "name": "Credit card",
-      "img": "./images/products/product_10.svg",
+      "img": "../images/products/product_10.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 11,
       "name": "Hacker",
-      "img": "./images/products/product_11.svg",
+      "img": "../images/products/product_11.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     },
     {
       "id": 12,
       "name": "Firewall",
-      "img": "./images/products/product_12.svg",
+      "img": "../images/products/product_12.svg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
     }
   ]
