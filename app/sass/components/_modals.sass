@@ -20,7 +20,7 @@
     border-radius: 4px
 
   &--cookies
-    position: absolute
+    position: fixed
     display: flex
     bottom: 0
     left: 0
@@ -29,6 +29,8 @@
     justify-content: space-between
 
     background-color: rgba(darken($mine-shaft, 4.5), 0.83)
+
+    z-index: 6
 
     &__text
       +mada-regular(1.4rem)
