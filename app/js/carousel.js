@@ -98,7 +98,7 @@ const carouselHandler = e => {
   })
 }
 
-fetch('./data/carousel.json')
+fetch('./carousel.json')
   .then(response => {
     return response.json()
       .then(data => {
