@@ -3,6 +3,7 @@ const sections = document.querySelectorAll('section');
 const createSectionCounter = (array) => {
   const sections = [...array];
   sections.map((section, index) => {
+    section.setAttribute('data-index', index+1);
     const sectionCounterContainer = document.createElement('div');
     sectionCounterContainer.classList.add('modal','modal--section-counter');
     sectionCounterContainer.setAttribute('data-active', false);

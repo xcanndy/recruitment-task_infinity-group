@@ -39,6 +39,32 @@
       background-color: $white
       border-radius: 5px
 
+  &--jump-to
+    display: none
+    flex-direction: column
+    position: fixed
+    justify-content: center
+    align-items: center
+    bottom: 10%
+    right: 0
+
+    z-index: 10
+    
+    & a img
+      width: 3rem
+      padding: 2rem 2rem 2rem 1rem
+
+    a:first-child
+      border-left: 1px solid $black
+
+      transform: rotate(-90deg)
+
+    a:nth-child(2)
+      transform: rotate(90deg)
+
+    &:hover
+      cursor: pointer
+
   &--cookies-close
     display: inline-flex
     justify-content: center
