@@ -70,7 +70,7 @@ gulp.task('useref', callback => {
   const cssFilter = $.filter('app/css/*.css', {restore: true});
 
   pump([
-    gulp.src(['app/*.html', 'app/data/*.json']),
+    gulp.src(['app/*.html', 'app/*.json']),
     $.useref(),
     // js: es6 => es5 + minify
     jsFilter,
