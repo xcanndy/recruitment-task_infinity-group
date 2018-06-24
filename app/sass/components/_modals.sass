@@ -33,12 +33,45 @@
 
     z-index: 6
 
+    +mobile-small
+      padding: 2% 10%
+      flex-direction: column
+    
+    +mobile-medium
+      padding: 2% 10%
+      flex-direction: column
+
+    +mobile-large
+      padding: 2% 10%
+      // flex-direction: column
+
+    &__img 
+      margin-right: 5%
+
+      +mobile-small
+        margin-bottom: 5%
+
+      +mobile-medium
+        margin-bottom: 2%
+
+      +mobile-large
+        margin-bottom: 2%
+
     &__text
       +mada-regular(1.4rem)
       line-height: 1.89rem
       letter-spacing: 0.25
       color: $white
       width: 80%
+
+      +mobile-small
+        width: 100%
+
+      +mobile-medium
+        width: 100%
+
+      +mobile-large
+        width: 100%
 
       a
         color: $lima
