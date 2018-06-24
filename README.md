@@ -13,7 +13,7 @@ To run project use `gulp server` / `gulp server:prod` (development / production)
 
 To develop project use `gulp`.
 
-To check on which port the project is running look in command line
+To check on which port the project is running look in command line.
 
 ## Deployment
 To build project (production mode) use `gulp build:prod`.
