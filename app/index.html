@@ -19,17 +19,17 @@
   <header class="container container--header">
     <nav class="nav nav--main" data-scroll="false">
       <div class="nav--main__buttons">
-        <button class="btn btn--hamburger" id="btnHamburger" data-scroll="false" disabled>
+        <button class="btn btn--hamburger" id="btnHamburger" data-scroll="false" disabled aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
           Menu
         </button>
-        <a href="#" class="logo" id="logo" data-scroll="false" data-visible="true">
+        <a href="#" class="logo" id="logo" data-scroll="false" data-visible="true" aria-expanded="true">
           <img src="./images/logo.svg" alt="Logo">
         </a>
       </div>
-      <ul class="menu" id="menu" data-visible="true">
+      <ul class="menu" id="menu" data-visible="true" aria-expanded="true">
         <li class="menu__item"><a href="#missionSection">Mission</a></li>
         <li class="menu__item"><a href="#clientsSection">Clients</a></li>
         <li class="menu__item"><a href="#productsSection">Products</a></li>
@@ -41,8 +41,8 @@
     </h1>
     <!-- cookies -->
     <button class="btn btn--jump-to">
-        <a href="#"><img src="./images/arrow-jump-to.svg" alt="Jump up"></a>
-        <a href="#contactSection"><img src="./images/arrow-jump-to.svg" alt="Jump down"></a>
+        <a href="#" aria-label="Jump to previous section"><img src="./images/arrow-jump-to.svg" alt="Jump up" aria-label="Jump to previous section"></a>
+        <a href="#contactSection" aria-label="Jump to next section"><img src="./images/arrow-jump-to.svg" alt="Jump down" aria-label="Jump to next section"></a>
     </button>
   </header>
   <section class="container container--mission" id="missionSection">
@@ -63,7 +63,7 @@
   <section class="container container--map" id="mapSection">
     <address class="address">
       <div class="address__title">
-        <img src="./images/map-icon.svg" alt="Compass icon" class="address__img">Infinity Group Sp. z o.o.
+        <img src="./images/map-icon.svg" alt="Compass icon" class="address__img" aria-hidden="true">Infinity Group Sp. z o.o.
       </div>
         ul.Skladowa 12, <br/>
         15-399 Bialystok, <br/>
@@ -74,7 +74,7 @@
   </section>
   <section class="container container--contact" id="contactSection">
     <h2 class="container--contact__title">Contact</h2>
-    <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up">
+    <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up" alt="Button arrow" aria-hidden="true">
     </button>
     <div class="contact">
       <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, <strong>totam rem aperiam</strong>, eaque ipsa quae ab illo <strong>inventore veritatis et</strong> quasi architecto beatae vitae.</p>
@@ -89,7 +89,7 @@
           <span class="checkbox checkbox--contact" aria-describedby="checkbox-info" aria-label="checkbox"></span>
         </label>
         <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">
-          send details <img src="./images/arrow-icon.svg" class="arrow">
+          send details <img src="./images/arrow-icon.svg" class="arrow" alt="Button arrow" aria-hidden="true">
         </button>
       </form>
     </div>    

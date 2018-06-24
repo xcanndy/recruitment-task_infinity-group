@@ -23,6 +23,7 @@ const createCarousel = slides => {
     const slideImage = document.createElement('img');
     slideImage.classList.add('slide__img');
     slideImage.src = slide.img;
+    slideImage.alt = `Slide image`;
 
     slideContainer.append(slideImage);
 

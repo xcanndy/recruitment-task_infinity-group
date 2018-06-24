@@ -21,6 +21,7 @@ const menuScrollHandler = () => {
   } else if(scrollPercentage < 0.0001 && body.offsetWidth >= 768) {
     dataToggleHandler([nav, logo], 'data-scroll', 'false');
     dataToggleHandler([menu, logo], 'data-visible', 'true');
+    dataToggleHandler([menu, logo], 'aria-expanded', 'true');
   }
 }
 
@@ -39,6 +40,7 @@ const menuVisibilityHandler = () => {
   else if(body.offsetWidth < 768) {
     dataToggleHandler([menu, logo], 'data-visible', toggle);
     dataToggleHandler([btnHamburger, nav, logo], 'data-scroll', toggle);
+    dataToggleHandler([menu, logo, btnHamburger], 'aria-expanded', toggle);
   } 
 }
 
@@ -47,6 +49,9 @@ const sizeChecking = () => {
     dataToggleHandler([menu], 'data-visible', 'false');
     dataToggleHandler([nav, logo], 'data-scroll', 'false');
     dataToggleHandler([btnHamburger], 'data-scroll', 'true');
+    dataToggleHandler([btnHamburger], 'data-visible', 'true');
+    dataToggleHandler([menu, logo], 'aria-expanded', 'false');
+    dataToggleHandler([btnHamburger], 'aria-expanded', 'true');
 
     btnHamburger.disabled = false;
     btnHamburger.addEventListener('click', menuVisibilityHandler)
@@ -54,7 +59,8 @@ const sizeChecking = () => {
   if(body.offsetWidth >= 768) {
     dataToggleHandler([btnHamburger], 'data-visible', 'false');
     dataToggleHandler([btnHamburger], 'data-scroll', 'false');
-    dataToggleHandler([menu], 'data-visible', 'true');
+    dataToggleHandler([menu, logo], 'data-visible', 'true');
+    dataToggleHandler([btnHamburger], 'aria-expanded', 'false');
   }
 }
 

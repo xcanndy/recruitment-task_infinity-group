@@ -7,6 +7,7 @@ const createSectionCounter = array => {
     const sectionCounterContainer = document.createElement('div');
     sectionCounterContainer.classList.add('modal','modal--section-counter');
     sectionCounterContainer.setAttribute('data-active', false);
+    sectionCounterContainer.setAttribute('aria-hidden', true);
     if(section.id === 'clientsSection')
       sectionCounterContainer.setAttribute('data-color', 'light');
     else 
