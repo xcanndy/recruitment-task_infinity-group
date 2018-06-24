@@ -1,6 +1,6 @@
 # Infinity Group recruitment task
 Project made for the intership recruitment process in Infinity Group.
-___
+
 ## Getting Started
 To download [click here](https://gitlab.com/xcanndy/recruitment-task_infinity-group/-/archive/master/recruitment-task_infinity-group-master.zip) or use project repository site [repository site](https://gitlab.com/xcanndy/recruitment-task_infinity-group).
 
