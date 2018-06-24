@@ -10,6 +10,7 @@ To have project running on your local you need to have installed **Node.js** and
 ### Installing
 In project root folder use `npm install` to install all dependencies.
 To run project use `gulp server` / `gulp server:prod` (development / production).
+
 To develop project use `gulp`.
 
 To check on which port the project is running look in command line
