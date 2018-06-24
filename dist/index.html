@@ -84,7 +84,7 @@
           Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required aria-required="required"> or send an email to <input type="email" name="form__email" placeholder="Your email address" required aria-required="required">.
         </span>
         <label for="contact__checkbox" id="checkbox-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required aria-required="required">
-          <span class="checkbox checkbox--contact" aria-describedby="checkbox-info"></span>
+          <span class="checkbox checkbox--contact" aria-describedby="checkbox-info" aria-label="checkbox"></span>
         </label>
         <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">
           send details <img src="./images/arrow-icon.svg" class="arrow">
@@ -103,6 +103,11 @@
 <!-- map -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV7I4Cvl9DsFKDrr4fqbDR3mbnuIzcE-M&callback=initMap"
   type="text/javascript"></script>
+
+<!-- smooth scroll  -->
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {speed: 800});
+</script>
 </body>
 
 </html>
