@@ -3,7 +3,7 @@ const buttonJumpTo = document.querySelector('.btn--jump-to'),
       buttonUp = document.querySelector('.btn--jump-to').children[0],
       buttonDown = document.querySelector('.btn--jump-to').children[1];
 
-let currentSection = 0;
+let currentSection = 0,
     currentHref = sectionsArray[currentSection].id;
 
 const changeSectionUp = () => {
