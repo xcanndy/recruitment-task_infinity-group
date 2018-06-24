@@ -80,13 +80,13 @@
       <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, <strong>totam rem aperiam</strong>, eaque ipsa quae ab illo <strong>inventore veritatis et</strong> quasi architecto beatae vitae.</p>
       <form action="" class="contact__form" id="form--contact">
         <span>
-          Hello! I'm <input type="text" name="form__name" placeholder="Your name" required> and I represent <input type="text" name="form__company-name" placeholder="Company name" required>.
+          Hello! I'm <input type="text" name="form__name" placeholder="Your name" required aria-required="required"> and I represent <input type="text" name="form__company-name" placeholder="Company name" required aria-required="required">.
         </span>
         <span>
-          Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required> or send an email to <input type="email" name="form__email" placeholder="Your email address" required>.
+          Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required aria-required="required"> or send an email to <input type="email" name="form__email" placeholder="Your email address" required aria-required="required">.
         </span>
-        <label for="contact__checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required>
-          <span class="checkbox checkbox--contact"></span>
+        <label for="contact__checkbox" id="checkbox-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required aria-required="required">
+          <span class="checkbox checkbox--contact" aria-describedby="checkbox-info"></span>
         </label>
         <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">
           send details <img src="./images/arrow-icon.svg" class="arrow">
