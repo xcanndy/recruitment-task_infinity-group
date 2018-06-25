@@ -4,8 +4,6 @@
   width: 100%
   display: inline-flex
   position: relative
-
-  overflow: hidden
   
 .slide
   display: none
@@ -17,32 +15,18 @@
   &[data-active="true"]
     display: flex
 
-    +mobile-small 
-      flex-direction: column
-
-    +mobile-medium
-      flex-direction: column
-
-    +mobile-large
+    +media(0px, $phone-large)
       flex-direction: column
 
   &__img
     max-width: 100%
     object-fit: contain
 
-    +mobile-small
+    +media(0px, $phone-large)
       order: 2
       margin: 10% 0
 
-    +mobile-medium
-      order: 2
-      margin: 10% 0
-
-    +mobile-large
-      order: 2
-      margin: 10% 0
-
-    +tablet
+    +phone-large
       width: 50%
 
 .review
@@ -53,80 +37,17 @@
 
   +mada-light(1rem)
 
-  &__text
-    margin-bottom: 3%
-    position: relative
-
-    font-size: 3rem
-    line-height: 4.19rem
-
-    +desktop-small
-      font-size: 2.5rem
-
-    +mobile-small 
-      margin: 10% 0 0 10%
-
-      text-align: center
-      font-size: 2.5rem
-      line-height: 3.5rem
-
-    +mobile-medium
-      margin: 10% 0 0 10%
-      
-      text-align: end
-      font-size: 2.5rem
-      line-height: 3.5rem
-
-    +mobile-large
-      margin: 10% 0 0 5%
-
-      text-align: end
-      font-size: 2.5rem
-      line-height: 3.5rem
-
-    +tablet
-      font-size: 2.2rem
-      line-height: 3.5rem
-    
-    &::before
-      position: absolute
-      top: -25%
-      left: -10% 
-
-      +mada-black(61px)
-      content: '„'
-
-      +mobile-small
-        top: -15%
-        left: -15%
-
-      +mobile-medium
-        top: -10%
-        left: -5%
-
-      +mobile-large
-        top: -15%
-        left: -3%
-
-      +desktop-small
-        left: -15%
-
   &__author
     margin-bottom: 5%
 
     font-size: 2.2rem
     line-height: 2.69rem
 
-    +mobile-small
-      text-align: end
+    +phone-small
       font-size: 2rem
 
-    +mobile-medium
+    +media(0px, $phone-medium)
       text-align: end
-      font-size: 2rem
-
-    +desktop-small
-      font-size: 2rem
 
     a
       color: $white
@@ -136,13 +57,7 @@
     display: flex
     color: $white
 
-    +mobile-small
-      align-self: flex-end
-
-    +mobile-medium
-      align-self: flex-end
-
-    +mobile-large
+    +media(0px, $tablet)
       align-self: flex-end
 
 .tag
@@ -154,22 +69,9 @@
 
   border: 1px solid $white
 
-  +mobile-small
+  +media(0px, $desktop-small)
     &:last-child
       margin-right: 0
-
-  +mobile-medium
-    &:last-child
-      margin-right: 0
-
-  +mobile-large
-    &:last-child
-      margin-right: 0
-
-  +tablet
-    &:last-child
-      margin-right: 0
-  
 
 .dots
   position: absolute

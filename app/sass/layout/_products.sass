@@ -2,26 +2,13 @@
 @import '../base/typography'
   
 .container--products
-  flex-direction: column
-  align-items: center
-  padding: 6% 22.4%
-
   &__title
     margin-bottom: 3%
 
     +homenaje(5rem)
     color: $mine-shaft
 
-    +mobile-small
-      font-size: 4rem
-
-    +mobile-medium
-      font-size: 4rem
-
-    +mobile-large
-      font-size: 4rem
-
-    +tablet
+    +media(0px, $desktop-small)
       font-size: 4rem
 
   &__text
@@ -31,16 +18,7 @@
     line-height: 3rem
     color: $tundora
 
-    +mobile-small
-      text-align: center
-
-    +mobile-medium
-      text-align: center
-
-    +mobile-large
-      text-align: center
-
-    +tablet
+    +media(0px, $desktop-small)
       text-align: center
   
 .products
@@ -49,18 +27,11 @@
   width: 100%
   justify-content: space-between
 
-  +mobile-small
+  +media(0px, $phone-large)
     flex-direction: column
     align-items: center
 
-  +mobile-medium
-    flex-direction: column
-    align-items: center
-
-  +mobile-large
-    flex-direction: row
-
-  +tablet
+  +media($phone-large, $desktop-small)
     flex-direction: row
 
   &__item
@@ -72,20 +43,17 @@
 
     cursor: pointer
 
-    +mobile-small
+    +media(0px, $phone-large)
       display: block
       max-width: 80%
 
-    +mobile-medium
-      display: block
-      max-width: 80%
-
-    +mobile-large
+    +media($phone-large, $desktop-small)
       display: flex
+
+    +phone-large
       max-width: 50%
 
     +tablet
-      display: flex
       max-width: 33.333%
 
     &:hover
@@ -96,16 +64,10 @@
 
       z-index: 5
 
-      +mobile-small
+      +media(0px, $phone-large)
         padding: 5% 5% 0 5%
 
-      +mobile-medium
-        padding: 5% 5% 0 5%
-
-      +mobile-large
-        padding: 5% 0 0 0
-
-      +tablet
+      +media($phone-large, $desktop-small)
         padding: 5% 0 0 0
 
       & img
@@ -129,16 +91,7 @@
         visibility: visible
         z-index: -4
 
-        +mobile-small
-          padding-top: 5%
-
-        +mobile-medium
-          padding-top: 5%
-
-        +mobile-large
-          padding-top: 5%
-
-        +tablet
+        +media(0px, $desktop-small)
           padding-top: 5%
 
   & p 

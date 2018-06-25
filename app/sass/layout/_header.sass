@@ -4,18 +4,21 @@
 
 
 .container--header
-  height: 100vh
-  padding: 0 15%
-  justify-content: center
-  position: relative
+  &__title
+    text-align: center
+    +homenaje(5.8rem)
+    line-height: 6.048rem
+    text-transform: uppercase
+    align-self: center
+    color: $mine-shaft
 
-  background: url('../images/header_background.jpg') no-repeat center center fixed
-  background-size: cover
+    +media(0px, $desktop-small)
+      font-size: 5rem
 
-  overflow: hidden
-
-  +tablet
-    padding: 0 10%
+    > :first-child
+      display: block
+      
+      color: $white
   
 .nav--main
   position: fixed
@@ -25,15 +28,7 @@
 
   z-index: 10
 
-  +mobile-small
-    height: auto
-    width: 100vw
-
-  +mobile-medium
-    height: auto
-    width: 100vw
-
-  +mobile-large
+  +media(0px, $tablet)
     height: auto
     width: 100vw
 
@@ -44,17 +39,7 @@
     display: inline-block
     margin-right: auto
 
-    +mobile-small
-      margin-left: 5%
-      margin-right: 0
-      z-index: 10
-
-    +mobile-medium
-      margin-left: 5%
-      margin-right: 0
-      z-index: 10
-
-    +mobile-large
+    +media(0px, $tablet)
       margin-left: 5%
       margin-right: 0
       z-index: 10
@@ -70,18 +55,14 @@
   justify-content: center
   align-items: center
 
-  +mobile-small
+  +media(0px, $tablet)
     display: none
+
+  +phone-small
     width: $nav-size - 50px
     height: $nav-size - 50px
 
-  +mobile-medium
-    display: none
-    width: $nav-size - 40px
-    height: $nav-size - 40px
-
-  +mobile-large
-    display: none
+  +media($phone-medium, $tablet)
     width: $nav-size - 40px
     height: $nav-size - 40px
 
@@ -92,20 +73,13 @@
   &[data-scroll="true"]
     background-color: lighten($mine-shaft, 2.5)
 
-    +mobile-small
+    +media(0px, $tablet)
       display: flex
       margin: 0 auto
       min-width: 100%
 
-    +mobile-medium
+    +media($phone-medium, $tablet)
       min-width: 80%
-      margin: 0 auto
-      display: flex
-
-    +mobile-large
-      min-width: 80%
-      margin: 0 auto
-      display: flex
 
   &[data-visible="false"]
     display: none
@@ -114,25 +88,7 @@
   display: inline-flex
   margin-right: auto
 
-  +mobile-small
-    position: absolute
-    padding-bottom: 10%
-    width: 100%
-    flex-direction: column
-    align-items: center
-
-    background-color: lighten($mine-shaft, 2.5)
-
-  +mobile-medium
-    position: absolute
-    padding-bottom: 10%
-    width: 100%
-    flex-direction: column
-    align-items: center
-
-    background-color: lighten($mine-shaft, 2.5)
-
-  +mobile-large
+  +media(0px, $tablet)
     position: absolute
     padding-bottom: 10%
     width: 100%
@@ -147,17 +103,7 @@
     align-items: center
     justify-content: center
 
-    +mobile-small
-      padding: 1rem 1.5rem
-      margin: 5% 0 0 0 
-      border-bottom: 1px solid rgba($white, 0.5)
-
-    +mobile-medium
-      padding: 1rem 1.5rem
-      margin: 5% 0 0 0 
-      border-bottom: 1px solid rgba($white, 0.5)
-
-    +mobile-large
+    +media(0px, $tablet)
       padding: 1rem 1.5rem
       margin: 5% 0 0 0 
       border-bottom: 1px solid rgba($white, 0.5)
@@ -181,13 +127,7 @@
       background-color: rgba($white, 0.5)
       content: ''
 
-      +mobile-small
-        display: none
-
-      +mobile-medium
-        display: none
-
-      +mobile-large
+      +media(0px, $tablet)
         display: none
 
     &:first-child
@@ -199,30 +139,5 @@
 
   &[data-visible="false"]
     display: none
-      
-.header__title
-  text-align: center
-  +homenaje(5.8rem)
-  line-height: 6.048rem
-  text-transform: uppercase
-  align-self: center
-  color: $mine-shaft
-
-  +mobile-small
-    font-size: 5rem
-
-  +mobile-medium
-    font-size: 5rem
-
-  +mobile-large
-    font-size: 5rem
-
-  +tablet
-    font-size: 5rem
-
-  > :first-child
-    display: block
-    
-    color: $white
 
 

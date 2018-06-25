@@ -1,30 +1,12 @@
 @import './base/typography'
 @import './base/colors'
 
-.container--clients
-  padding: 10% 15%
-  flex-direction: column
-  justify-content: center
-  align-items: center
+.container__title--clients
+  line-height: 6.018rem
+  color: $white
 
-  background: url('../images/clients_background.jpg') no-repeat center center fixed
-  background-size: cover
-
-  &__title
-    +homenaje(4.9rem)
-    line-height: 6.018rem
-    color: $white
-
-    +mobile-small
-      font-size: 4.5rem
-
-    +mobile-medium
-      font-size: 4.5rem
-
-    +mobile-large
-      font-size: 4.5rem
-    
-    +tablet
-      font-size: 4.5rem
+  +media(0px, $phone-medium)
+    font-size: 4.5rem
+      
 
     

@@ -22,17 +22,17 @@
 
     transition: top 0.5s
 
-    +mobile-small
+    +phone-small
       width: $nav-size - 40px
       height: $nav-size - 40px
 
-    +mobile-medium
-      width: $nav-size - 30px
-      height: $nav-size - 30px
+    +phone-medium
+      width: $nav-size - 40px
+      height: $nav-size - 40px
 
-    +mobile-large
-      width: $nav-size - 20px
-      height: $nav-size - 20px
+    +phone-large
+      width: $nav-size - 40px
+      height: $nav-size - 40px
 
     &:hover 
       background-color: darken($lima, 3)
@@ -91,10 +91,10 @@
 
     border-radius: 3px
 
-    +mobile-small
+    +phone-small
       margin-top: 5%
 
-    +mobile-medium
+    +phone-medium
       margin-top: 3%
 
     &:hover
@@ -119,15 +119,7 @@
 
     border-radius: 3px
 
-    +mobile-small
-      display: inline-flex
-      align-self: flex-end
-
-    +mobile-medium
-      display: inline-flex
-      align-self: center
-
-    +mobile-large
+    +media(0px, $phone-large)
       display: inline-flex
       align-self: flex-end
 

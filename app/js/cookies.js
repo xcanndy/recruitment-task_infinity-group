@@ -33,6 +33,7 @@ const createCookiesElement = () => {
 
   const cookiesButtonIcon = document.createElement('img');
   cookiesButtonIcon.src = './images/cross.svg';
+  cookiesButtonIcon.setAttribute('aria-hidden', true);
 
   cookiesButton.append(cookiesButtonText);
   cookiesButton.append(cookiesButtonIcon);

@@ -32,7 +32,7 @@ const createCarousel = slides => {
     reviewContainer.classList.add('review');
 
     const reviewText = document.createElement('p');
-    reviewText.classList.add('review__text');
+    reviewText.classList.add('text-block','text-block--review');
     reviewText.innerText = slide.review.text;
 
     reviewContainer.append(reviewText);
@@ -44,6 +44,7 @@ const createCarousel = slides => {
     const reviewLinkElement = document.createElement('a');
     reviewLinkElement.href = slide.review.link;
     reviewLinkElement.target = '_blank';
+    reviewLinkElement.rel = 'noopener';
     reviewLinkElement.innerText = slide.review.linkName;
 
     reviewAuthorElement.append(reviewLinkElement);

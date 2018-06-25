@@ -1,0 +1,79 @@
+.container
+  display: flex
+  position: relative
+
+  &__title
+    +homenaje(5rem)
+    line-height: 5.6rem
+
+  &--header
+    height: 100vh
+    padding: 0 15%
+    justify-content: center
+    position: relative
+
+    background: url('../images/header_background.jpg') no-repeat center center fixed
+    background-size: cover
+
+    +tablet
+      padding: 0 10%
+
+  &--mission
+    min-height: 80vh
+    padding: 0 22.4%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+
+    +media(0px, $tablet)
+      padding: 10% 15%
+
+    +tablet
+      padding: 5% 15%
+
+  &--clients
+    padding: 10% 15%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    background: url('../images/clients_background.jpg') no-repeat center center fixed
+    background-size: cover
+
+  &--products
+    flex-direction: column
+    align-items: center
+    padding: 6% 22.4%
+
+  &--map
+    height: $map-height
+    justify-content: flex-end
+    align-items: center
+
+    background-color: $seashell
+
+    border-left: 3vw solid $gallery
+
+    +media(0px, $desktop-small)
+      flex-direction: column
+
+  &--contact
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 10% 15%
+
+    background-color: $alabaster
+
+    +media(0px, $tablet)
+      flex-direction: column
+      padding: 10% 10%
+
+  &--footer
+    padding: 2rem 15%
+
+    +mada-light(1.2rem)
+    line-height: 1.89rem
+    color: $gray
+
+    background-color: darken($mine-shaft, 3.5 )
