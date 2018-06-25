@@ -15,19 +15,16 @@
   &[data-active="true"]
     display: flex
 
-    +media(0px, $phone-large)
+    +media(0px, $desktop-small)
       flex-direction: column
 
   &__img
     max-width: 100%
     object-fit: contain
 
-    +media(0px, $phone-large)
+    +media(0px, $desktop-small)
       order: 2
       margin: 10% 0
-
-    +phone-large
-      width: 50%
 
 .review
   display: flex
