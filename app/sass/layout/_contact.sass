@@ -100,52 +100,52 @@
     &.invalid
       outline: 1px solid $red
 
-  & .checkbox--contact__label
-    display: flex
-    align-items: center
-    justify-content: center
-    position: relative
-    margin: 1.5% 0 5% 0
-    padding-left: 3rem
-
-    +mada-light(1.8rem)
-    line-height: 4.19rem
-    color: darken($mine-shaft, 0.1)
-
-    cursor: pointer
-
-    &:hover input ~ .checkbox--contact
-      background-color: $mercury      
-
-    input[type="checkbox"]
-      position: absolute
-      left: -100%
-      opacity: 0
-
-      &:checked ~ .checkbox--contact
-        background-color: $lima
-        border: 1px solid $scorpion
-
-      &:checked ~ .checkbox--contact::after
-        display: block
-        position: absolute
-        top: 10%
-        left: 30%
-
-    .checkbox--contact
-      width: 2rem
-      height: 2rem
-      box-sizing: border-box
-
-      background-color: $white
-
-      border: 1px solid $alto
-
-      &::after
-        position: absolute
-        display: none
-
-        content: ""
-
   & > .btn--contact
     align-self: center
+
+.checkbox--contact__label
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  margin: 1.5% 0 5% 0
+  padding-left: 3rem
+
+  +mada-light(1.8rem)
+  line-height: 4.19rem
+  color: darken($mine-shaft, 0.1)
+
+  cursor: pointer
+
+  &:hover input ~ .checkbox--contact
+    background-color: $mercury      
+
+  input[type="checkbox"]
+    position: absolute
+    left: -100%
+    opacity: 0
+
+    &:checked ~ .checkbox--contact
+      background-color: $lima
+      border: 1px solid $scorpion
+
+    &:checked ~ .checkbox--contact::after
+      display: block
+      position: absolute
+      top: 10%
+      left: 30%
+
+.checkbox--contact
+  width: 2rem
+  height: 2rem
+  box-sizing: border-box
+
+  background-color: $white
+
+  border: 1px solid $alto
+
+  &::after
+    position: absolute
+    display: none
+
+    content: ""
