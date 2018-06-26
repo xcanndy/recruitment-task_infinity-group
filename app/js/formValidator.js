@@ -59,7 +59,7 @@ const validator = (input, pattern, message) => {
 }
 
 // event listeners for inputs
-nameInput.addEventListener('change', validator(nameInput, namePattern, "Your name should contain only letters and symbol: ,.'-"));
+nameInput.addEventListener('change', validator(nameInput, namePattern, "Your name should contain only letters and symbols: ,.'-"));
 emailInput.addEventListener('change', validator(emailInput, emailPattern, "Your email looks invalid"));
 companyNameInput.addEventListener('change', validator(companyNameInput, companyNamePattern, "Company name should contain only letters, numbers and the following symbols: -_.&!"));
 phoneInput.addEventListener('change', validator(phoneInput, phonePattern, `Phone number examples: 

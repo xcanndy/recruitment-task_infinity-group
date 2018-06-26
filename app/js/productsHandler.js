@@ -3,6 +3,7 @@ const productsSection = document.querySelector('.products');
 const createProductHtml = product => {
   const productContainer = document.createElement('div');
   productContainer.classList.add('products__item');
+  productContainer.tabIndex = 0;
 
   const productImg = document.createElement('img');
   productImg.src = product.img;

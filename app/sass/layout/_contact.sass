@@ -19,6 +19,10 @@
     +tablet
       margin-bottom: 0
 
+  & > .btn--contact
+    padding: 0 1rem
+    max-height: 4rem
+
 .contact
   display: flex
   flex-direction: column
@@ -45,100 +49,103 @@
     +desktop-small
       font-size: 2rem
 
-  &__form
+.form--contact
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin-top: 5%
+  position: relative
+
+  +mada-light(3rem)
+  line-height: 4.19rem
+
+  +media(0px, $desktop-small)
+    font-size: 2.5rem
+
+  +desktop-small
+    font-size: 2.7rem
+
+  span
+    display: block
+
+    +media(0px, $phone-large)
+      display: inline-flex
+      flex-direction: column
+
+  input
+    margin: 0 1%
+    padding: 0.5% 1%
+    margin-bottom: 0.5%
+
+    +mada-light(2rem)
+
+    background-color: $alabaster
+
+    border: none
+    border-bottom: 2px solid $dusty-grey
+
+    +media(0px, $tablet)
+      display: inline-flex
+
+    &::placeholder
+      font-size: 1.4rem
+
+    &:focus
+      & ~ .checkbox--contact
+        outline: 5px auto -webkit-focus-ring-color
+
+    &.invalid
+      outline: 1px solid $red
+
+  & .checkbox--contact__label
     display: flex
-    flex-direction: column
-    width: 100%
-    margin-top: 5%
+    align-items: center
+    justify-content: center
     position: relative
+    margin: 1.5% 0 5% 0
+    padding-left: 3rem
 
-    +mada-light(3rem)
+    +mada-light(1.8rem)
     line-height: 4.19rem
+    color: darken($mine-shaft, 0.1)
 
-    +media(0px, $desktop-small)
-      font-size: 2.5rem
+    cursor: pointer
 
-    +desktop-small
-      font-size: 2.7rem
+    &:hover input ~ .checkbox--contact
+      background-color: $mercury      
 
-    span
-      display: block
+    input[type="checkbox"]
+      position: absolute
+      left: -100%
+      opacity: 0
 
-      +media(0px, $phone-large)
-        display: inline-flex
-        flex-direction: column
+      &:checked ~ .checkbox--contact
+        background-color: $lima
+        border: 1px solid $scorpion
 
-    input
-      margin: 0 1%
-      padding: 0.5% 1%
-      margin-bottom: 0.5%
-
-      +mada-light(2rem)
-
-      background-color: $alabaster
-
-      border: none
-      border-bottom: 2px solid $dusty-grey
-
-      +media(0px, $tablet)
-        display: inline-flex
-
-      &::placeholder
-        font-size: 1.4rem
-
-      &:focus
-        & ~ .checkbox--contact
-          outline: 5px auto -webkit-focus-ring-color
-
-      &.invalid
-        outline: 1px solid $red
-
-    & .checkbox--contact__label
-      display: flex
-      align-items: center
-      justify-content: center
-      position: relative
-      margin: 1.5% 0 5% 0
-      padding-left: 3rem
-
-      +mada-light(1.8rem)
-      line-height: 4.19rem
-      color: darken($mine-shaft, 0.1)
-
-      cursor: pointer
-
-      &:hover input ~ .checkbox--contact
-        background-color: $mercury      
-
-      input[type="checkbox"]
+      &:checked ~ .checkbox--contact::after
+        display: block
         position: absolute
-        left: -100%
-        opacity: 0
+        top: 10%
+        left: 30%
 
-        &:checked ~ .checkbox--contact
-          background-color: $lima
-          border: 1px solid $scorpion
+    .checkbox--contact
+      width: 2rem
+      height: 2rem
+      box-sizing: border-box
 
-        &:checked ~ .checkbox--contact::after
-          display: block
-          position: absolute
-          top: 10%
-          left: 30%
+      background-color: $white
 
-      .checkbox--contact
-        width: 2rem
-        height: 2rem
-        box-sizing: border-box
+      border: 1px solid $alto
 
-        background-color: $white
+      &::after
+        position: absolute
+        display: none
 
-        border: 1px solid $alto
+        content: ""
 
-        &::after
-          position: absolute
-          display: none
+  & > .btn--contact
+    align-self: center
 
-          content: ""
-
-    .btn--contact
-      align-self: center
+    +phone-large
+      max-width: 40%

@@ -7,6 +7,26 @@
 
   +media(0px, $phone-medium)
     font-size: 4.5rem
+
+.dots
+  display: flex
+  justify-content: space-between
+  margin-top: 2%  
+
+  & > .dot
+    display: block
+    width: 15px
+    height: 15px
+    margin-left: 1rem
+
+    &:first-child
+      margin-left: 0
+
+    background-color: rgba($white, 0.5)
+    border-radius: 50%
+
+    &[data-active="true"]
+      background-color: $white
       
 
     

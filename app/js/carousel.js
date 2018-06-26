@@ -1,12 +1,9 @@
-const clientsSection = document.querySelector('#clientsSection');
+const clientsSection = document.querySelector('#clientsSection'),
+      dotsElement = document.querySelector('.dots');
 
 const createCarousel = slides => {
   const carouselContainer = document.createElement('div');
   carouselContainer.classList.add('carousel');
-
-  const dots = document.createElement('div');
-  dots.classList.add('dots');
-  carouselContainer.append(dots);
 
   slides.map( slide => {
     const slideContainer = document.createElement('div');
@@ -75,9 +72,9 @@ const createCarousel = slides => {
       dot.setAttribute('data-active', false);
 
     dot.addEventListener('click', carouselHandler);
-    dots.append(dot);
+    dotsElement.append(dot);
 
-    carouselContainer.insertBefore(slideContainer, dots);
+    carouselContainer.append(slideContainer);
   });
 
   return carouselContainer;
@@ -105,7 +102,7 @@ fetch('./carousel.json')
     return response.json()
       .then(data => {
         const slides = data.slides;
-        clientsSection.appendChild(createCarousel(slides));
+        clientsSection.insertBefore(createCarousel(slides), dotsElement);
       });
   });
 
