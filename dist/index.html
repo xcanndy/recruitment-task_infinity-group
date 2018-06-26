@@ -1,5 +1,5 @@
 <!DOCTYPE >
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Aleksandra Chmur">
   <meta name="keywords" content="">
+  
 
   <link rel="stylesheet" href="./css/styles.min.css">
 
@@ -34,7 +35,7 @@
         <li class="menu__item"><a href="#contactSection">Contact</a></li>
       </ul>
     </nav>
-    <h1 class="header__title">
+    <h1 class="container--header__title">
       <span>Praktyki</span> Infinity-Group
     </h1>
     <!-- cookies -->
@@ -44,15 +45,16 @@
     </button>
   </header>
   <section class="container container--mission" id="missionSection">
-    <h2 class="container--mission__title">Mission</h2>
-    <p class="container--mission__text-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
+    <h2 class="container__title">Mission</h2>
+    <p class="text-block text-block--mission">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
   </section>
   <section class="container container--clients" id="clientsSection">
-    <h2 class="container--clients__title">Clients</h2>
+    <h2 class="container__title container__title--clients">Clients</h2>
     <!-- carousel -->
+    <div class="dots"></div>
   </section>
   <section class="container container--products" id="productsSection">
-    <h2 class="container--products__title">Products</h2>
+    <h2 class="container__title">Products</h2>
     <p class="container--products__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
     <div class="products">
       <!-- products list -->
@@ -71,19 +73,21 @@
     <div class="map" id="map"></div>
   </section>
   <section class="container container--contact" id="contactSection">
-    <h2 class="container--contact__title">Contact</h2>
+    <h2 class="container__title">Contact</h2>
     <button class="btn btn--contact">Let us know how to contact You <img src="./images/arrow-icon.svg" class="arrow arrow--up" alt="Button arrow" aria-hidden="true">
     </button>
     <div class="contact">
       <p class="contact__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, <strong>totam rem aperiam</strong>, eaque ipsa quae ab illo <strong>inventore veritatis et</strong> quasi architecto beatae vitae.</p>
-      <form action="" class="contact__form" id="form--contact">
+      <form action="" class="form--contact" id="contact-form">
         <span>
-          Hello! I'm <input type="text" name="form__name" placeholder="Your name" required aria-required="required"> and I represent <input type="text" name="form__company-name" placeholder="Company name" required aria-required="required">.
+          <label for="name">Hello! I'm <input type="text" name="form__name" id="name" placeholder="Your name" required aria-required="true"></label>
+          <label for="company-name"> and I represent <input type="text" name="form__company-name" id="company-name" placeholder="Company name" required aria-required="true">.</label>
         </span>
         <span>
-          Call me at <input type="tel" name="form__phone" placeholder="Your telephone number" required aria-required="required"> or send an email to <input type="email" name="form__email" placeholder="Your email address" required aria-required="required">.
+          <label for="telephone">Call me at <input type="tel" name="form__phone" id="telephone" placeholder="Your telephone number" required aria-required="true"></label>
+          <label for="email">or send an email to <input type="email" name="form__email" id="email" placeholder="Your email address" required aria-required="true">.</label>
         </span>
-        <label for="contact__checkbox" id="checkbox-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required aria-required="required">
+        <label for="contact__checkbox" class="checkbox--contact__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<input type="checkbox" name="form__checkbox" id="contact__checkbox" required aria-required="true">
           <span class="checkbox checkbox--contact" aria-describedby="checkbox-info" aria-label="checkbox"></span>
         </label>
         <button class="btn btn--contact" type="submit" form="form--contact" value="Submit">
